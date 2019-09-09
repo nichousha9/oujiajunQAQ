@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡1.0</title>
+    <style>
+        #xuan {
+            margin: 100px;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            width: 100px;
+            background: #eeeeee;
+            line-height: 60px;
+        }
+
+        .bai {
+            background: #fff;
+            border-bottom: none;
+
+        }
+
+        .bian {
+            width: 308px;
+            height: 180px;
+            display: none;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="xuan">
+        <input type="button" class="bai" value="1">
+        <input type="button" value="2">
+        <input type="button" value="3">
+        <div class="bian" style="display: block;">1</div>
+        <div class="bian">2</div>
+        <div class="bian">3</div>
+    </div>
+</body>
+<script src="../选项卡/option.js"></script>
+<script>
+    /*
+    做一个选项卡
+    需求：鼠标移动到li标签的时候li标签要添加.bai
+    对应的div添加display: block;
+    */
+
+    //移动到哪个哪个就显示
+    (function () {
+       ojtKA({
+           ele:'xuan',
+
+       })
+    })();
+</script>
+
+</html>

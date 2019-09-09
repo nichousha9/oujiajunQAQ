@@ -1,0 +1,173 @@
+.enroll_top {
+  background: #f3f3f3;
+  height: auto;
+}
+
+.enroll_top .enroll_head {
+  width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  height: 32px;
+  justify-content: space-between;
+  padding: 2px 0px;
+  color: #666666;
+  line-height: 26px;
+}
+
+.enroll_top .enroll_head i {
+  font-size: 18px;
+  color: #19d113;
+}
+
+.enroll_top .enroll_head span {
+  font-size: 12px;
+}
+
+.enroll_top .enroll_head span:hover {
+  color: #c7df44;
+}
+
+.enroll_top .enroll_head p {
+  font-size: 12px;
+  margin-top: 1px;
+}
+
+.enroll_top .enroll_head li {
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.enroll_top .enroll_head .enroll_left {
+  display: flex;
+}
+
+.enroll_top .enroll_head .enroll_rigth {
+  display: flex;
+}
+
+.enroll_logo {
+  width: 1220px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.enroll_logo img {
+  width: 214px;
+  height: 58px;
+}
+
+.enroll_logo h2 {
+  font-size: 28px;
+  margin-left: 35px;
+}
+
+.enroll_inp {
+  width: 1220px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 80px;
+  align-items: center;
+}
+
+.enroll_inp li {
+  width: 500px;
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+}
+
+.enroll_inp li label {
+  font-size: 12px;
+  color: #000000;
+  display: inline-block;
+  line-height: 27px;
+  width: 72px;
+  text-align: right;
+}
+
+.enroll_inp li input {
+  height: 35px;
+  border: 1px solid #ccc;
+  width: 260px;
+  padding-left: 3px;
+  margin-left: 10px;
+}
+
+.enroll_inp li span {
+  font-size: 16px;
+  position: absolute;
+  left: 90%;
+  text-align: left;
+  min-width: 200px;
+}
+
+.enroll_inp .passw {
+  position: relative;
+}
+
+.enroll_inp .passw i {
+  position: absolute;
+  top: 12px;
+  left: 64%;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.enroll_inp .yzm .yzm_text {
+  width: 120px;
+}
+
+.enroll_inp .yzm .yzm_sjs {
+  width: 120px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 37px;
+  margin-left: 10px;
+}
+
+.enroll_inp .yzm i {
+  line-height: 34px;
+  font-size: 20px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.enroll_inp .dxyzm {
+  display: none;
+}
+
+.enroll_inp .dxyzm .dxyzm_text {
+  width: 120px;
+  margin-left: 5px;
+}
+
+.enroll_inp .dxyzm .dxyzm_btn {
+  width: 160px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.enroll_inp .yd {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.enroll_inp .yd input {
+  height: 14px;
+  width: 14px;
+  margin-left: 82px;
+  margin-right: 5px;
+}
+
+.enroll_inp .zc input {
+  background: #e61616;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 82px;
+  border-radius: 10px;
+  cursor: pointer;
+}

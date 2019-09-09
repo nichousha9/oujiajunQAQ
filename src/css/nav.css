@@ -1,0 +1,76 @@
+.nav {
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+  border-bottom: 2px solid #f0123a;
+}
+
+.nav .nav_list {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 35px;
+}
+
+.nav .nav_list h6 {
+  background: #f0123a;
+  color: #fff;
+  padding: 0 14px;
+}
+
+.nav .nav_list li {
+  padding: 0 14px;
+}
+
+.nav .nav_list .nav_gaoliang {
+  background: #f0123a;
+  color: #fff;
+}
+
+.nav .nav_menu {
+  background: #f0123a;
+  width: 100%;
+  display: none;
+}
+
+.nav .nav_menu .nav_menu_sel {
+  height: auto;
+  width: 1200px;
+  display: flex;
+  margin: auto;
+}
+
+.nav .nav_menu .nav_menu_sel .nav_menu_dl {
+  display: block;
+  padding: 6px 10px;
+  width: 185px;
+  height: auto;
+  background: url(../img/nav_border.jpg);
+  background-repeat: repeat-y;
+  font-size: 12px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.nav .nav_menu .nav_menu_sel .nav_menu_dl dt {
+  font-weight: bold;
+}
+
+.nav .nav_menu .nav_menu_sel .nav_menu_dl dt spen {
+  padding: 5px;
+}
+
+.nav .nav_menu .nav_menu_sel .nav_menu_dl dd {
+  padding: 0px 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.nav .nav_menu .nav_menu_sel .nav_menu_dl .nav_gaoliang2 {
+  background: #fff;
+  color: #f0123a;
+  border-radius: 5px;
+}
