@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>放大镜</title>
+   <link rel="stylesheet" href="../放大镜/css/Moren.css">
+   <link rel="stylesheet" href="../放大镜/css/fangdajing.css">
+</head>
+
+<body>
+    <div id="box">
+        <div class="bigimg">
+            <!-- <img src="/img/主板plus1.jpg" alt=""> -->
+        </div>
+        <div class="imgs">
+            <!-- <img src="/img/主板plus1.jpg" alt="">
+            <div class="zhuai"></div> -->
+        </div>
+        <div class="box3">
+            
+            <ul class="samllimg">
+                <!-- <img src="/img/主板plus1.jpg" alt="">
+                <img src="/img/主板plus2.jpg" alt="">
+                <img src="/img/主板plus3.jpg" alt="">
+                <img src="/img/主板plus4.jpg" alt="">
+                <img src="/img/主板plus5.jpg" alt=""> -->
+            </ul>
+        </div>
+        <div class="lefts"></div>
+        <div class="rights"></div>
+    </div>
+</body>
+<script src="../放大镜/js/fangdajing.js"></script>
+<script>
+  
+        fangdajing({
+            ele: 'box',//最外层盒子的id(必填)
+            imglist: ["../放大镜/img/主板plus1.jpg", "../放大镜/img/主板plus1.jpg", "../放大镜/img/主板plus1.jpg","../放大镜/img/主板plus1.jpg","../放大镜/img/主板plus1.jpg","../放大镜/img/主板plus1.jpg"],//图片数据(必填)
+            scal: 2,//大图放大倍数(选填,默认是2倍)
+            speed: 1,//小图运动的图片个数(选填,默认是一次动一张图)
+            Width: 80,//小图的宽度 宽度 + 左右边框 左右padding
+            BoPa: 8 //左右边框加左右padding的和
+        });
+   
+</script>
+</html>

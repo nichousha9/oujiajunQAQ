@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/Moren.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="log_head">
+      <h1 class="log_logo left">
+        <a href="###">
+          <img src="../img/logo_yaya.png" width="113" height="50" />
+          <span>欢迎登录</span>
+        </a>
+      </h1>
+    </div>
+    <div class="log_bottom">
+    <div class="wrapper" id="login_body">
+            <div class="log_ad">   
+                <a href="https://www.yaya.cn/list/113-0-0-0-0-1.html"></a>     
+            </div>
+            <div class="login_border" style="padding:8px;">
+                <!--普通登录-->
+                <div class="login" style="display: block;">
+                    <div class="zc" style="position:absolute; right:30px; top:14px; font-size: 14px;">账号注册
+                        <em style="width:16px; height:16px; background:#999; float:right; color:#fff; border-radius:100%; text-align:center; line-height:16px; margin:1px 0 0 5px; font-family:'宋体'; font-weight:bold;">&gt;</em>
+                    </div>
+                    <ul class="login-tab">                     
+                        <li class="login-on">普通登录</li>
+                        <li>手机登录</li>
+                    </ul>
+                    <div class="login-body">
+                         <div class="login-style" style="display: block;">
+                            <dl>
+                                <dd><input type="text" id="txtUser" placeholder="用户名/邮箱/手机号"></dd>
+                            </dl>
+                            <dl>
+                                <dd><input type="password" id="Userpwd" placeholder="请输入您的密码"></dd>
+                            </dl>
+                            <div class="remember">
+                                <input type="checkbox" id="issave" checked=""><label for="issave">下次自动登录</label>
+                                <div class="psword" style="font-size: 12px; float: right;"><a href="###" style="color: #999;">忘记密码?</a></div>
+                            </div>
+                            <div class="tishi"></div>
+                            <button id="logbtn" style="outline:none">登 录</button>
+                        </div>
+                        <div class="login-style">
+                            <dl>
+                                <dd><input type="text" id="phone" placeholder="您的手机号码"></dd>
+                            </dl>
+                            <dl id="yz-code">
+                                <dd style="display: flex;">
+                                    <input type="text" id="txtCode2" style="width: 133px; margin-right: 10px;" placeholder="验证码">
+                                    <h5>1</h5>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dd style="display: flex;">
+                                    <input type="text" id="dynamicPWD" style="width: 133px;" placeholder="短信验证码">
+                                    <input type="button" id="btn" class="btn_mfyzm" value="获取动态密码">
+                                </dd>
+                            </dl>
+                            <div class="remember">
+                                <input type="checkbox" id="issave1" checked=""><label for="issave1">下次自动登录</label>
+                                 <div class="tishi"></div>
+                            <button type="button" id="dynamicLogon" style="outline:none">登 录</button>
+                            </div>
+                         
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="log_footer"></div>
+  </body>
+<script src="../js/require.js" data-main="../js/login"></script>
+</html>

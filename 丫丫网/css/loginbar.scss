@@ -1,0 +1,167 @@
+#loginbar {
+  width: 100%;
+  font-size: 12px;
+  height: 30px;
+  background: #e3e4e5;
+  border-bottom: solid 1px #e3e4e5;
+  position: relative;
+  .logintop {
+    width: 1200px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #6b6b6b;
+    em {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid #bbb;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 3px;
+    }
+    i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 3px;
+      vertical-align: text-top;
+    }
+    .zuo {
+      background: url(../img/weizhi.png) no-repeat;
+    }
+    .vip {
+      background: url(../img/icon.png) no-repeat;
+      background-position: -54px -18px;
+    }
+    .bu {
+      background: url(../img/jubao.png) no-repeat;
+    }
+    .dian {
+      background: url(../img/icon.png) no-repeat;
+      background-position: -72px -18px;
+    }
+    a {
+      color: #6b6b6b;
+    }
+    .login_left {
+      display: flex;
+      width: 300px;
+      text-align: center;
+      li {
+        margin: 0px 5px;
+      }
+    }
+    .login_right {
+      display: flex;
+      justify-content: flex-end;
+      width: 750px;
+      text-align: center;
+      li {
+        margin: 0px 10px;
+      }
+      .geren {
+        position: relative;
+        width: 75px;
+        ul {
+          position: absolute;
+          background: #fff;
+          top: 29px;
+          width: 90px;
+          left: -37px;
+          padding: 0 10px;
+          border: solid 1px #ddd;
+          display: none;
+          z-index: 96;
+        }
+      }
+      .geren:hover {
+        background: #fff;
+      }
+      .nav1:hover {
+        background: #fff;
+      }
+      .geren:hover em {
+        transform: rotate(180deg);
+        transition: all 0.3s linear;
+      }
+      .nav1:hover em {
+        transform: rotate(180deg);
+        transition: all 0.3s linear;
+      }
+    }
+  }
+}
+#login_nav {
+  width: 1200px;
+  margin: auto;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 30px;
+  left: 112px;
+}
+.nav {
+  display: flex;
+  border: 1px solid #ccc;
+  border-top: none;
+  li {
+    width: 20%;
+    height: 200px;
+    border-right: 1px solid #ccc;
+    padding: 20px 0;
+    overflow: hidden;
+    background: #f7f7f7;
+    h3 {
+      margin: 0 20px 10px;
+      font-size: 16px;
+    }
+    span {
+      float: left;
+      margin: 0 20px 10px;
+      height: 32px;
+      line-height: 32px;
+      color: #6b6b6b;
+      position: relative;
+      width: 78px;
+      i {
+        display: inline-block;
+        position: absolute;
+        background: url(https:www.yaya.cn/static/images/jiaobiao.png) no-repeat;
+        width: 11px;
+        height: 11px;
+        line-height: 16px;
+        text-align: center;
+        font-size: 10px;
+        margin-left: 1px;
+      }
+      .hot-icon {
+        background-position: left top;
+      }
+      .new-icon {
+        background-position: left bottom;
+      }
+    }
+  }
+  li:nth-child(2n-1) {
+    background: #fff;
+  }
+  li:nth-child(1) h3 {
+    color: orange;
+  }
+  li:nth-child(2) h3 {
+    color: rgb(113, 164, 206);
+  }
+  li:nth-child(3) h3 {
+    color: #58a;
+  }
+  li:nth-child(4) h3 {
+    color: rgb(162, 221, 85);
+  }
+  li:nth-child(5) h3 {
+    color: red;
+  }
+}

@@ -1,0 +1,130 @@
+#nav2 {
+  position: relative;
+}
+
+.home_nav2 {
+  font-size: 12px;
+  color: #fff;
+  width: 220px;
+  height: 480px;
+  background: rgba(51, 51, 51, 0.6);
+}
+
+.home_nav2 .cur {
+  background: rgba(51, 51, 51, 0.5);
+}
+
+.home_nav2 li {
+  padding: 8px 10px;
+  position: relative;
+  color: #fff;
+  transition: all 0.1s;
+}
+
+.home_nav2 li div {
+  height: 20px;
+}
+
+.home_nav2 li i {
+  background: url(../img/icon.png);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: text-top;
+}
+
+.home_nav2 li span {
+  display: block;
+  height: 44px;
+  line-height: 22px;
+  overflow: hidden;
+  padding-left: 24px;
+}
+
+.home_nav2 li span a {
+  color: #fff;
+  margin-right: 7px;
+  display: inline-block;
+}
+
+.home_nav2 li:nth-child(1) i {
+  background-position: -32px -36px;
+}
+
+.home_nav2 li:nth-child(2) i {
+  background-position: -154px -18px;
+}
+
+.home_nav2 li:nth-child(3) i {
+  background-position: -98px -36px;
+}
+
+.home_nav2 li:nth-child(4) i {
+  background-position: -65px -36px;
+}
+
+.home_nav2 li:nth-child(5) i {
+  background-position: -48px -36px;
+}
+
+.home_nav2 li:nth-child(6) i {
+  background-position: -114px -21px;
+}
+
+.home_xq {
+  width: 760px;
+  background: #fff;
+  height: 480px;
+  border-bottom: 1px solid #4fb99f;
+  border-right: 1px solid #4fb99f;
+  position: absolute;
+  top: 0px;
+  left: 220px;
+  display: none;
+  z-index: 10;
+}
+
+.home_xq .home_dlbox {
+  height: 100%;
+}
+
+.home_xq .home_dlbox .home_dlbox_dl {
+  width: calc(100% - 210px);
+  display: flex;
+  line-height: 24px;
+  font-size: 14px;
+  border-bottom: solid 1px #eee;
+  clear: both;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.home_xq .home_dlbox .home_dlbox_dl dt {
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
+  display: block;
+  line-height: 25px;
+  color: #4fb99f;
+}
+
+.home_xq .home_dlbox .home_dlbox_dl dd {
+  color: #666666;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.home_xq .home_dlbox .home_img {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 480px;
+}

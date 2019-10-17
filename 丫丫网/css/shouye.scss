@@ -1,0 +1,527 @@
+body {
+  background: #f7f7f7;
+  position: relative;
+}
+#shou_logo {
+  margin-top: 30px;
+  height: 145px;
+  border-bottom: 2px solid #4fb99f;
+  .head_top {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+  }
+  .head_bottom {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    .all_nav {
+      width: 650px;
+      line-height: 45px;
+      display: flex;
+      margin-left: 220px;
+      li {
+        font-size: 16px;
+        padding: 0 16px;
+        height: 45px;
+        display: block;
+        line-height: 45px;
+        white-space: nowrap;
+        color: #333;
+      }
+      li:hover {
+        color: #4fb99f;
+      }
+    }
+  }
+  .head_logo {
+    width: 285px;
+    display: flex;
+  }
+  .head_inp {
+    width: 555px;
+    margin-right: 62px;
+    .inp_search {
+      width: 100%;
+      position: relative;
+      .inp_chaxun {
+        border: 1px solid #4fb99f;
+        width: 465px;
+        outline: 0;
+        padding: 0 10px;
+        height: 34px;
+      }
+      .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+        color: #fff;
+        float: left;
+        width: 70px;
+        height: 36px;
+        line-height: 34px;
+        cursor: pointer;
+        font-size: 16px;
+        background: #4fb99f;
+      }
+    }
+    .inp_text {
+      line-height: 20px;
+      font-size: 12px;
+      color: #808080;
+      height: 20px;
+      li {
+        margin-right: 5px;
+        float: left;
+        a {
+          color: #9c9c9c;
+        }
+      }
+    }
+  }
+  .header-cart {
+    width: 160px;
+    float: right;
+    position: relative;
+    a {
+      background: #fff;
+      border: solid 1px #dfdfdf;
+      color: #000;
+      text-align: center;
+      height: 38px;
+      line-height: 38px;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      z-index: 95;
+      span {
+        padding: 0 3px;
+        background: #4fb99f;
+        color: #fff;
+        height: 14px;
+        line-height: 14px;
+        border-radius: 14px;
+        font-size: 12px;
+      }
+    }
+    .header-cart-box {
+      width: 300px;
+      height: 500px;
+      background: #fff;
+      position: absolute;
+      top: 39px;
+      right: 0;
+      z-index: 94;
+      border: solid 1px #dfdfdf;
+      /* display: none; */
+    }
+  }
+}
+
+#banner {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  #shou_lun {
+    overflow: hidden;
+    position: relative;
+  }
+  #shou_xin {
+    width: 220px;
+    background: #fff;
+    height: 480px;
+    overflow: hidden;
+    .xin_top {
+      padding: 10px;
+      dl {
+        overflow: hidden;
+        dt {
+          float: left;
+          border: 3px solid #eee;
+          border-radius: 100%;
+          overflow: hidden;
+          width: 42px;
+          height: 42px;
+          margin: 0 5px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        dd {
+          margin-left: 64px;
+          line-height: 22px;
+          font-size: 12px;
+          p {
+            color: #f70;
+          }
+          a {
+            color: #333;
+          }
+        }
+      }
+      .login-text {
+        font-size: 12px;
+        a {
+          color: #4fb99f;
+        }
+      }
+    }
+    .xin_toutiao {
+      height: auto;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      font-size: 12px;
+      h3 {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        border-bottom: solid 1px #eee;
+        border-top: solid 1px #eee;
+        a {
+          display: inline-block;
+          margin-right: 15px;
+          color: #333;
+          font-size: 14px;
+          text-decoration: none;
+          float: none;
+        }
+        span {
+          cursor: pointer;
+          float: right;
+          color: #9c9c9c;
+        }
+      }
+      li {
+        height: 24px;
+        line-height: 24px;
+        color: #999;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 10px;
+      }
+    }
+    .xin_tese {
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      h3 {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        border-bottom: solid 1px #eee;
+        border-top: solid 1px #eee;
+        color: #333;
+        font-size: 14px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 72px;
+          height: 72px;
+          font-size: 12px;
+          text-align: center;
+          i {
+            width: 36px;
+            height: 36px;
+            margin: 8px auto 4px;
+            background: url(../img/icon2.png) no-repeat;
+            display: block;
+            background-size: 495px;
+          }
+        }
+        li:nth-child(1) i {
+          background-position: 0 0;
+        }
+        li:nth-child(2) i {
+          background-position: -51px 0;
+        }
+        li:nth-child(3) i {
+          background-position: -204px -0;
+        }
+        li:nth-child(4) i {
+          background-position: -306px -0px;
+        }
+        li:nth-child(5) i {
+          background-position: -357px -0px;
+        }
+        li:nth-child(6) i {
+          background-position: -408px -0px;
+        }
+        li:nth-child(7) i {
+          background-position: -153px -0px;
+        }
+        li:nth-child(8) i {
+          background-position: -255x -0px;
+        }
+        li:nth-child(9) i {
+          background-position: -305px -0px;
+        }
+        .cur1 {
+          background: #e1cece;
+          color: #4fb99f;
+        }
+      }
+    }
+  }
+}
+#jiyou {
+  margin-top: 20px;
+}
+.jiyou1 {
+  width: 1200px;
+  margin: auto;
+}
+.diy-elevator {
+  position: fixed;
+  top: 100px;
+  width: 36px;
+  margin-left: 50px;
+  z-index: 9;
+  display: none;
+  a {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    padding: 4px;
+    text-decoration: none;
+    line-height: 14px;
+    display: block;
+    text-align: center;
+    background: #bbb;
+    color: #fff;
+    margin-bottom: 1px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  a.active {
+    background: #333;
+  }
+}
+#shou_ele {
+  width: 1200px;
+  margin: auto;
+  li {
+    background: #fff;
+    margin-bottom: 20px;
+    height: 564px;
+    .logceng {
+      width: 1200px;
+      height: 54px;
+    }
+    .ele_main {
+      padding: 10px;
+      overflow: hidden;
+      height: 440px;
+      background: #fff;
+      display: flex;
+      .main_left {
+        width: 190px;
+        position: relative;
+        img {
+          transition-duration: 1s;
+          vertical-align: top;
+          width: 190px;
+          height: 290px;
+        }
+        img:hover {
+          height: 300px;
+          width: 200px;
+        }
+      }
+      .bottomAD {
+        position: relative;
+        display: block;
+        height: 150px;
+        color: #fff;
+        text-align: center;
+        a {
+          line-height: 34px;
+          position: absolute;
+          background: #ccc;
+          font-size: 12px;
+          top: -34px;
+          width: 150px;
+          left: -10px;
+          padding: 0 30px 0 20px;
+          opacity: 0.7;
+          text-align: left;
+          color: #fff;
+        }
+        dl {
+          padding: 30px 20px;
+          height: 84px;
+          width: 150px;
+          dt {
+            font-size: 26px;
+            margin-bottom: 5px;
+          }
+          dd span {
+            width: 70px;
+            display: inline-block;
+            line-height: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+      .bottomAD:before {
+        content: "";
+        border-top: 6px solid #444;
+        border-left: 10px solid transparent;
+        left: -10px;
+        top: 0;
+        position: absolute;
+      }
+      .main_cen {
+        margin-left: 10px;
+        width: 780px;
+        height: 440px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 24.8%;
+          height: 220px;
+          border-right: 1px dashed #d6d6d6;
+          border-bottom: 1px dashed #d6d6d6;
+          margin: 0;
+          font-size: 12px;
+          position: relative;
+          .cen_top {
+            padding: 10px 10px;
+            line-height: 18px;
+            width: 170px;
+            h3 {
+              font-size: 14px;
+              padding-bottom: 8px;
+            }
+            i {
+              font-size: 12px;
+            }
+          }
+          img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition-duration: 0.3s;
+            width: 120px;
+            height: 120px;
+          }
+        }
+        li:hover img {
+          right: 20px;
+        }
+      }
+      .main_right {
+        width: 200px;
+        dl {
+          position: relative;
+          height: 110px;
+          dt {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px 10px;
+            line-height: 18px;
+            width: 180px;
+            h3 {
+              font-size: 14px;
+              padding-bottom: 8px;
+              font-weight: normal;
+            }
+          }
+          dd {
+            position: absolute;
+            transition-duration: 0.3s;
+            right: 0;
+            bottom: 0;
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+        dl:hover dd {
+          right: 20px;
+        }
+      }
+    }
+    .shou_bottom_nav {
+      height: 46px;
+      line-height: 46px;
+      background: #325bb5;
+      opacity: 0.7;
+      padding-left: 10px;
+      i {
+        font-size: 16px;
+        margin-right: 20px;
+        line-height: 46px;
+      }
+      span {
+        font-size: 14px;
+        line-height: 16px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 16px 0 0 15px;
+        padding-right: 15px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      a:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+.geng {
+  width: 1200px;
+  margin: 20px auto;
+  .shou_ul {
+    margin-top: 20px;
+    overflow: hidden;
+    height: 630px;
+    ul {
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 202px;
+        height: 280px;
+        padding: 15px;
+        margin-bottom: 10px;
+        background: #fff;
+        line-height: 20px;
+        font-size: 14px;
+        img {
+          vertical-align: top;
+          width: 100%;
+        }
+        p {
+          color: red;
+        }
+      }
+    }
+  }
+  h6 {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    // border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #dfdfdf;
+    color: #999;
+    text-align: center;
+    margin: 20px auto;
+    transition: all ease-in-out 0.3s;
+  }
+  h6:hover {
+    background: #e73828;
+    color: #fff;
+    border: 1px solid #e73828;
+  }
+}

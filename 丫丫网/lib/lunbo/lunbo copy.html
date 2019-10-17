@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../轮播图/css/Moren.css">
+    <link rel="stylesheet" href="../轮播图/css/lunbo.css">
+</head>
+
+<body>
+    <div id="box">
+    </div>
+</body>
+<script src="js/ku.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/carousel2.js"></script>
+<script>
+    let c1 = new Carousel({
+        //最外层的id节点
+        ele: 'box',
+        //盒子宽度
+        iw: 600,
+        //盒子高度
+        ih: 300,
+        //图片路径
+        imgdata: ['../轮播图/img/主板plus1.jpg',
+            '../轮播图/img/主板plus2.jpg',
+            '../轮播图/img/主板plus3.jpg',
+            '../轮播图/img/主板plus1.jpg'],
+        //执行时间
+        time: 2
+    });
+    c1.init();
+</script>
+
+</html>
