@@ -149,10 +149,10 @@
 
       //邮箱验证
       let ok7 = false;
-        $("#usermail").blur(function() {
-            let name = $("#usermail").val();
+      $("#usermail").blur(function() {
+        let name = $("#usermail").val();
         if (name) {
-            let reg = /^[\w&%$#!\-]+@[\w&%$#!\-]+\.[a-zA-Z]+$/;
+          let reg = /^[\w&%$#!\-]+@[\w&%$#!\-]+\.[a-zA-Z]+$/;
           let num = reg.test(name);
           if (num == true) {
             ok7 = true;
@@ -180,77 +180,78 @@
         no = !no;
       });
 
-          //手机验证码
-          let num = 10
-          let timer = null;
-          let shuzi = '';
-          let ok5 = false;
-          function ding() {
-              num--;
-              $('.dxbtn').val(num + '秒后重新获取验证码');
-              if (num <= 0) {
-                  clearInterval(timer);
-                  $('.dxbtn').val('获取短信验证码');
-                  $('.dxbtn').removeAttr("disabled");
-              }
+      //手机验证码
+      let num = 10;
+      let timer = null;
+      let shuzi = "";
+      let ok5 = false;
+      function ding() {
+        num--;
+        $(".dxbtn").val(num + "秒后重新获取验证码");
+        if (num <= 0) {
+          clearInterval(timer);
+          $(".dxbtn").val("获取短信验证码");
+          $(".dxbtn").removeAttr("disabled");
+        }
+      }
+      $(".dxbtn").click(() => {
+        $.ajax({
+          type: "post",
+          data: {
+            userphone: $("#usermobile2").val() //换成你的号码即可
+          },
+          url: "../api/duanxin.php",
+          async: true,
+          success: function(str) {
+            let arr = JSON.parse(str);
+            shuzi = arr.phonecode;
+            console.log(shuzi);
           }
-          $('.dxbtn').click(() => {
-              // $.ajax({
-              //     type: "post",
-              //     data: {
-              //         userphone: $('#usermobile2').val(),//换成你的号码即可
-              //     },
-              //     url: "../api/duanxin.php",
-              //     async: true,
-              //     success: function (str) {
-              //         let arr = JSON.parse(str)
-              //         shuzi = arr.phonecode;
-              //     }
-              // });
-              clearInterval(timer);
-              num = 10
-              $('.dxbtn').val(num + '秒后重新获取验证码');
-              timer = setInterval(ding, 1000);
-              $('.dxbtn').attr({ "disabled": "disabled" });
-          });
-          $('#phonecode2').blur(function () {
-              let num = $('#phonecode2').val();
-              if (num) {
-                  if (num == shuzi) {
-                      ok5 = true;
-                  } else {
-                      tan("验证码错误");
-                      ok5 = false;
-                  }
-              } else {
-                 tan("请输入");
-                  ok5 = false;
-              }
-          });
+        });
+        clearInterval(timer);
+        num = 10;
+        $(".dxbtn").val(num + "秒后重新获取验证码");
+        timer = setInterval(ding, 1000);
+        $(".dxbtn").attr({ disabled: "disabled" });
+      });
+      $("#phonecode2").blur(function() {
+        let num = $("#phonecode2").val();
+        if (num) {
+          if (num == shuzi) {
+            ok5 = true;
+          } else {
+            tan("验证码错误");
+            ok5 = false;
+          }
+        } else {
+          tan("请输入");
+          ok5 = false;
+        }
+      });
 
-          //注册
-        $('#regbut2').click(() => {
-              if (ok && ok1 && ok2 && ok3 && ok4 && ok6 &&ok7 == true) {
-                  $.ajax({
-                      type: 'post',
-                      url: '../api/login.php',
-                      data: {
-                          phone: $('.phone_text').val(),
-                          passw: $('.passw_text').val(),
-                          name: $('.name_text').val(),
-                          num: '2',
-                      },
-                      success: str => {
-                          if (str == 'yes') {
-                              location.href = 'login.html';
-                          } else {
-                              tan('注册成功')
-                          }
-                      }
-                  })
-              } else
-                  tan('信息有误')
+      //注册
+      $("#regbut2").click(() => {
+        if (ok && ok1 && ok2 && ok3 && ok4 && ok6 && ok7 && ok5 == true) {
+          $.ajax({
+            type: "post",
+            url: "../api/login.php",
+            data: {
+              email: $("#usermail").val(),
+              phone: $("#usermobile2").val(),
+              passw: $("#userpwd3").val(),
+              name: $("#userUID").val(),
+              num: "2"
+            },
+            success: str => {
+              if (str == "yes") {
+                location.href = "login.html";
+              } else {
+                tan("注册成功");
+              }
+            }
           });
+        } else tan("信息有误");
+      });
     });
   });
 })();

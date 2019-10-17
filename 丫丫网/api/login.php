@@ -1,6 +1,7 @@
 <?php
     include 'conn.php';
     $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
+    $names = isset($_REQUEST['names']) ? $_REQUEST['names'] : '';
     $passw = isset($_REQUEST['passw']) ? $_REQUEST['passw'] : '';
     $num = isset($_REQUEST['num']) ? $_REQUEST['num'] : '';
     $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
@@ -18,6 +19,9 @@
     $pirce= isset($_REQUEST['pirce']) ? $_REQUEST['pirce'] : '';
 
     switch ($num) {
+            case '1':
+				$sql = "SELECT * FROM xinxi WHERE $sum = '$names'";
+                break;
 			case '2':
 				$sql = "INSERT INTO xinxi(number,passw,num,email) VALUES('$name','$passw','$phone','$email')";//注册保存
                 break;
@@ -48,7 +52,14 @@
 		}
 
     $res = $conn->query($sql);
-    if($num == '2'){
+    if($num == '1'){
+        $res = $conn->query($sql);
+        $arr = $res->fetch_all(MYSQLI_ASSOC);
+        echo json_encode($arr);
+        $conn->set_charset('utf8');
+        $res->close();
+        $conn->close();
+    }else if($num == '2'){
         if($res){
             echo 'yes';
         }else{

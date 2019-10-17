@@ -26,16 +26,17 @@
                     }
                 } else {
                     let num4 = getCookie('sjhm');
-                    if (num4) {
-                        $('.login-style .sjhm').val(num4);
-                    }
+                    // if (num4) {
+                    //     $('#phone').val(num4);
+                    //     ok3 = true;
+                    // }
                 }
             }
 
             // //手机号码
             let ok4 = false;
-            $('.login-style #phone').blur(function () {
-                let arr = $('.login-style #phone').val();
+            $('#phone').blur(function () {
+                let arr = $('#phone').val();
                 if (arr) {
                     let reg = /^1[3-9]\d{9}$/;
                     let num = reg.test(arr);
@@ -47,6 +48,8 @@
                 } else {
                     ok4 = false;
                 }
+                console.log(ok4);
+                
             });
 
             //验证码
@@ -60,7 +63,7 @@
             };
             let arr = ''
             arr = suiji().toLowerCase();
-            let ok3 = false;
+            let ok3 = true;
             $('.login-style h5').click(() => {
                 arr = suiji().toLowerCase();
                 $('.login-style #txtCode2').html('');
@@ -76,6 +79,7 @@
                 } else {
                     ok3 = false;
                 }
+                console.log(ok3);
             });
 
             // //短信验证码
@@ -93,19 +97,19 @@
                 }
             }
             $('.btn_mfyzm').click(() => {
-                // $.ajax({
-                //     type: "post",
-                //     data: {
-                //         userphone: $('#phone').val(),//换成你的号码即可
-                //     },
-                //     url: "../api/duanxin.php",
-                //     async: true,
-                //     success: function (str) {
-                //         let arr = JSON.parse(str)
-                //         shuzi = arr.phonecode;
-                //         console.log(shuzi);
-                //     }
-                // });
+                $.ajax({
+                    type: "post",
+                    data: {
+                        userphone: $('#phone').val(),//换成你的号码即可
+                    },
+                    url: "../api/duanxin.php",
+                    async: true,
+                    success: function (str) {
+                        let arr = JSON.parse(str)
+                        shuzi = arr.phonecode;
+                        console.log(shuzi);
+                    }
+                });
                 clearInterval(timer);
                 num = 10
                 $('.btn_mfyzm').val(num + '秒后重新获取');
@@ -123,6 +127,8 @@
                 } else {
                     ok5 = false;
                 }
+                console.log(ok5);
+                
             });
 
             //记住账号密码
@@ -138,13 +144,25 @@
                 off = !off
             });
 
+            let ok7 = true
+            $('.login-style #issave1').prop('checked', true);
+            let off1 = false
+            $('.login-style #issave1').click(() => {
+                if (off1) {
+                    ok7 = true;
+                } else {
+                    ok7 = false
+                }
+                off1 = !off1
+               
+            });
+
             // //登录判断
             $('.login-style #logbtn').click(() => {
-                if (mima == true) {
-                    let ok1 = false;
-                    let sum = '';
-                    let arr = $('.login-style #txtUser').val();
-                    if (arr) {
+                let ok1 = false;
+                let sum = '';
+                let arr = $('.login-style #txtUser').val();
+                if (arr) {
                         let reg = /^[a-zA-Z][a-zA-Z0-9_]{6,15}$/;
                         let num = reg.test(arr);
                         ok1 = true;
@@ -162,23 +180,23 @@
                                 ok1 = false;
                             }
                         }
-                    } else {
-                        alert('账号不能为空')
-                    }
-                    let ok2 = false;
-                    let passw = $('.login-style #Userpwd').val();
-                    if (arr) {
+                } else {
+                    alert('账号不能为空')
+                }
+                let ok2 = false;
+                let passw = $('.login-style #Userpwd').val();
+                if (passw) {
                         let reg = /^[a-zA-Z]?\w{6,99}$/;
-                        let num = reg.test(arr);
+                        let num = reg.test(passw);
                         if (num == true) {
                             ok2 = true;
                         } else {
                             ok2 = false;
                         }
-                    } else {
-                        ok2 = false;
-                    }
-                    if (ok1 && ok2== true) {
+                } else {
+                    ok2 = false;
+                }
+                if (ok1 && ok2== true) {
                         $.ajax({
                             type: 'post',
                             url: '../api/login.php',
@@ -191,9 +209,22 @@
                             success: str => {
                                 if (str == 'yes') {
                                     if (ok6 == true) {
-                                        setCookie('number', arr, 7);
-                                        setCookie('passw', passw, 7);
-                                        setCookie('sjhm', '', 7);
+                                        let sum = 'number'
+                                        $.ajax({
+                                            type: 'post',
+                                            url: '../api/login.php',
+                                            data: {
+                                                names: arr,
+                                                num: '1',
+                                                sum: sum
+                                            },
+                                            dataType: "json",
+                                            success: str => {
+                                                setCookie('number', str[0].number, 7);
+                                                setCookie('passw', str[0].passw, 7);
+                                                setCookie('sjhm', str[0].num, 7);
+                                             }
+                                        })
                                     } else {
                                         setCookie('sjhm', '', 7);
                                         setCookie('number', '', 7);
@@ -205,28 +236,41 @@
                                 }
                             }
                         })
-                    } else {
-                        alert('请重新确认信息')
-                    }
                 } else {
-                    if (ok3 && ok4 && ok5 == true) {
-                        let num4 = $('.login-style .sjhm').val();
-                        if (ok6 == true) {
-                            setCookie('sjhm', num4, 7);
-                            setCookie('number', '', 7);
-                            setCookie('passw', '', 7);
-                        } else {
-                            setCookie('sjhm', '', 7);
-                            setCookie('number', '', 7);
-                            setCookie('passw', '', 7);
-                        }
-                        alert('成功');
-                        location.href = ('shouye.html?2');
-                    } else {
-                        alert('登录失败');
-                    }
+                    alert('请重新确认信息')
                 }
-            });
+            })
+            $('#dynamicLogon').click(function () {
+                if (ok3 && ok4 && ok5 == true) {
+                    let num4 = $('#phone').val();
+                    if (ok7 == true) {
+                        let sum = 'num'
+                        $.ajax({
+                            type: 'post',
+                            url: '../api/login.php',
+                            data: {
+                                names: num4,
+                                num: '1',
+                                sum: sum
+                            },
+                            dataType: "json",
+                            success: str => {
+                                setCookie('number', str[0].number, 7);
+                                setCookie('passw', str[0].passw, 7);
+                                setCookie('sjhm', str[0].num, 7);
+                            }
+                        })
+                    } else {
+                        setCookie('sjhm', '', 7);
+                        setCookie('number', '', 7);
+                        setCookie('passw', '', 7);
+                    }
+                    location.href = ('shouye.html?2');
+                } else {
+                    alert('登录失败')
+                    
+                }
+            })
 
 
             //立即注册
