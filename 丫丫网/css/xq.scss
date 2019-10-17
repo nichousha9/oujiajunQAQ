@@ -295,6 +295,11 @@
         border-bottom: 1px solid #505050;
       }
     }
+    .gu{
+      position: fixed;
+      z-index: 1;
+      top: 0;
+    }
     .right_canshu {
       border: 1px solid #dfdfdf;
       .canshu_main {

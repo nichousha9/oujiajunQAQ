@@ -351,6 +351,12 @@
   border-bottom: 1px solid #505050;
 }
 
+#xq_sqcanshu .xq_right .gu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
 #xq_sqcanshu .xq_right .right_canshu {
   border: 1px solid #dfdfdf;
 }

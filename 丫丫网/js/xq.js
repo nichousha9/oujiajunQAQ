@@ -145,7 +145,15 @@
             let idx = $(this).index()
             $('.renqi_main .renqi_1').eq(idx).addClass('cur3').siblings().removeClass("cur3");
         });
-        $('.xq_right .right_top').on('click', 'span', function () {
+      window.onscroll = function () {
+        if (window.scrollY > 1106) {
+          $('.right_top').addClass('gu');
+        } else {
+          $('.right_top').removeClass('gu');
+        }
+      };
+      $('.xq_right .right_top').on('click', 'span', function () {
+        window.scrollTo(0, 1106);
             $(this).addClass('acitve').siblings().removeClass("acitve");
             let idx = $(this).index();
             $('.xq_right .canshu_main').eq(idx).addClass('cur4').siblings().removeClass("cur4");
