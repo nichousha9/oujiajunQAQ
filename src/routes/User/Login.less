@@ -1,0 +1,85 @@
+@import '~antd/lib/style/themes/default.less';
+.loginHeader{
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  >img{
+    height: 32px;
+    margin:0 16px;
+    float:left
+  }
+  >h1{
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    margin:0;
+  }
+  a{
+    color:#74757B;
+  }
+  span{
+    margin-left:16px;
+    cursor:pointer;
+    i{
+      margin-right: 8px;
+    }
+  }
+}
+.main {
+  width: 422px;
+  margin: 108px auto 0 auto;
+  background: #FFF;
+  border: 1px solid rgba(0,21,41,0.08);
+  box-shadow: 0 0 12px 0 rgba(0,21,41,0.08);
+  border-radius: 8px;
+  padding: 10px 32px;
+
+  .title{
+    font-size: 24px;
+    color: rgba(0,21,41,0.85);
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom:20px;
+  }
+
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+  .regist{
+      text-align: center;
+    font-size: 13px;
+  }
+}
+.login{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: rgba(0,21,41,0.45);
+}
+.fogetPW{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: rgba(0,21,41,0.45);
+    margin-right: 14px;
+}

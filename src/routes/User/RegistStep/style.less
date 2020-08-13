@@ -1,0 +1,120 @@
+@import '~antd/lib/style/themes/default.less';
+
+.main {
+  width: 480px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,21,41,0.08);
+  box-shadow: 0 0 12px 0 rgba(0,21,41,0.08);
+  border-radius: 8px;
+  padding: 30px 50px;
+  padding-bottom: 0px;
+  position: relative;
+
+  .title{
+    font-size: 24px;
+    color: rgba(0,21,41,0.85);
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom:20px;
+  }
+
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+}
+.formDiv{
+    margin-top: 64px;
+    // position: absolute;
+    // width: 100%;
+    // left: 0;
+}
+.regist{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 32px;
+}
+.login{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 32px;
+}
+.fogetPW{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: rgba(0,21,41,0.45);
+    margin-right: 14px;
+}
+.title{
+    display: inline-flex;
+    span{
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+        color: rgba(0,21,41,0.85);
+        line-height: 24px;
+        text-align: center;
+    }
+    p{
+        font-family: PingFangSC-Medium;
+        font-size: 12px;
+        color: rgba(0,21,41,0.65);
+        line-height: 24px;
+        text-align: center;
+        margin-left: 16px;
+    }
+}
+.stepDiv{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 0 105px;
+    height: 64px;
+    background: #F7F9FA;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.09);
+}
+.step{
+    margin: auto;
+}
+.operRegist{
+    display: inline-flex;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+.operRegistBtn{
+    display: inline-flex;
+    float: right;
+    position: absolute;
+    right: 0px;
+}
+.formItem{
+    margin-bottom: 0px!important;
+}
+.formItemLast{
+    margin-bottom: 30px!important;
+}

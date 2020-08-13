@@ -1,0 +1,94 @@
+@import "../../common/less/color.less";
+.statisticalRobot{
+  box-sizing: border-box;
+}
+.statisticalRobot div{
+  box-sizing: border-box;
+}
+.totalBox{
+  box-sizing: border-box;
+  height: 136px;
+  display: flex;
+  div{
+    box-sizing: border-box;
+  }
+  >div{
+    flex:1;
+  }
+  .total{
+    border-right: 1px solid @borderColor;
+    display: flex;
+    padding-top:35px;
+    .img{
+      width:51px;
+    }
+    i{
+      color:@iconFontColor;
+      padding-left:20px;
+      font-size: 24px;
+    }
+    .totalNumber{
+      font-size: 24px;
+      font-weight: bold;
+      span{
+        font-size: 14px;
+      }
+    }
+    .totalText{
+      font-size: 14px;
+      line-height: 16px;
+      color:rgba(0,21,41,0.65);
+    }
+  }
+  .totalItem{
+    .text{
+      color:rgba(0,21,41,0.45);
+      line-height: 16px;
+      font-size: 14px;
+    }
+    .number{
+      color:  rgba(0,21,41,0.85);
+      font-size: 16px;
+      margin-top:8px;
+      line-height: 16px;
+    }
+  }
+}
+.guestTotal{
+  font-family: Helvetica;
+  font-size: 24px;
+  color: #001529;
+  line-height: 24px;
+  margin-bottom:8px;
+}
+.guestIconFont{
+  position: absolute;
+  top:-5px;
+  left:20px;
+}
+.guestTotalText{
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0,21,41,0.65);
+  line-height: 16px;
+}
+.details{
+  padding: 0 8px;
+  >.detailItem{
+    padding: 17px 0;
+    span:first-child{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: rgba(0,21,41,0.45);
+      line-height: 16px;
+    }
+    span:last-child{
+      float: right;
+      font-family: Helvetica;
+      font-size: 16px;
+      color: rgba(0,21,41,0.85);
+      line-height: 16px;
+      font-weight: bold;
+    }
+  }
+}

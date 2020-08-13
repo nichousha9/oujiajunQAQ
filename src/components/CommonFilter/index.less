@@ -1,0 +1,51 @@
+.filter-row {
+  &.unExpanded {
+    height: 48px;
+    overflow: hidden;
+  }
+  .filter-col {
+    margin-right: 0;
+  }
+  .filter-content {
+    // width: e("calc(100% - 210px)");
+    float: left;
+  }
+  .filter-btn-search {
+    float: left;
+    // width: 210px;
+    padding-left: 15px !important;
+    :global {
+      .ant-form-item {
+        display: inline-block;
+        float: right;
+      }
+    }
+    button {
+      margin-right: 10px;
+    }
+    button:last-of-type {
+      margin-right: 0;
+    }
+    .filter-expand {
+      padding: 10px;
+      cursor: pointer;
+      > i {
+        margin-left: 3px;
+      }
+    }
+  }
+  :global {
+    .ant-row.ant-form-item {
+      margin-bottom: 17px;
+      .ant-form-item-label label:after {
+        content: " ";
+      }
+      .ant-select {
+        width: 100%;
+      }
+      .ant-calendar-picker {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../common/less/color.less';
+:global{
+  .commonDatePickerMenue{
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid @borderColor;
+    .actionBox{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+    }
+    .actionBox .ant-btn:last-child{
+      margin-left: 10px;
+    }
+    .ant-menu-vertical{
+      border-right:0;
+    }
+    .ant-menu-vertical .ant-menu-item:not(:last-child){
+      border-bottom:0;
+    }
+    .ant-menu-vertical .ant-menu-item{
+      margin:0;
+    }
+    .ant-menu-item{
+      border: 1px solid @borderColor;
+      text-align: center;
+    }
+    .buttonSpan{
+      margin:0 10px;
+      float:left;
+    }
+    .buttonI{
+      float:right;
+      marginRight:10
+    }
+  }
+}
+

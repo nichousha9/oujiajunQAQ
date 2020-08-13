@@ -1,0 +1,21 @@
+@import "../../common/less/color.less";
+.resultContent{
+  >div{
+    min-height: 40px;
+    overflow: hidden;
+    img{
+      max-width:400px !important;
+    }
+    >div{
+      float:left;
+    }
+    >div:first-child{
+      width: 80px;
+      text-align: right;
+      color:@formlabelColor;
+    }
+    >div:last-child{
+      width:calc(~'100% - 100px');
+    }
+  }
+}

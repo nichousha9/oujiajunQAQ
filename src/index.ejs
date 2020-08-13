@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>鲸智小蜜</title>
+  <link rel="icon" href="<%=_publicPath%>favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_626221_nxjdfv6iez.css">
+  <script src="<%=_publicPath%>js/socket.io.js"></script>
+
+  <!-- kindeditor -->
+  <link rel="stylesheet" type="text/css" href="<%=_publicPath%>kindeditor/themes/default/default.css">
+
+  <script>
+    function ieVersion(){
+      try{
+        var index = navigator.userAgent.indexOf('MSIE')
+        if(index==-1)return false
+        var ver = Number(navigator.userAgent.substring(index+4,index+7))
+        return ver
+      }catch (e){}
+      return false
+    }
+
+    if(ieVersion()){
+      var b = confirm('系统不兼容当前浏览器，请点击确定下载火狐浏览器')
+      if(b){
+        window.open('http://www.firefox.com.cn/','_blank')
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <div id="root"></div>
+
+  <!-- 提示音 -->
+  <audio id='_alertAudio' src="<%=_publicPath%>audio/qq.wav"/>
+  <script src="<%=_publicPath%>nncapture/jquery-1.10.2.min.js"></script>
+	<script language="javascript" src="<%=_publicPath%>nncapture/jquery.md5.js"></script>
+  <script language="javascript" src="<%=_publicPath%>nncapture/jquery.json-2.3.min.js?v=20150926"></script>
+
+   <!-- kindeditor -->
+   <script type="text/javascript" src="<%=_publicPath%>kindeditor/kindeditor.js"></script>
+   <script type="text/javascript" src="<%=_publicPath%>kindeditor/lang/zh-CN.js"></script>
+
+
+  <script type="text/javascript" src="<%=_publicPath%>nncapture/nnhelper.js"></script>
+	<script type="text/javascript" src="<%=_publicPath%>nncapture/niuniucapture.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@import "../../../common/less/color";
+.systemRole{
+  display: flex;
+  height:100%;
+  .systemRoleHeader{
+    box-sizing: border-box;
+  }
+  .addMenueBox{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addMenue{
+    border: 1px dashed @borderColor;
+    padding: 0 40px;
+    box-sizing: border-box;
+    color:@labelColor;
+    text-align: center;
+    height:40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor:pointer;
+  }
+  .menuList{
+    // height:calc(~"100% - 130px");
+    height:calc(~"100% - 50px");
+    overflow-y: auto;
+  }
+  .roleLeft{
+    width:230px;
+    border-right:0;
+  }
+  .roleRight{
+    flex: 1;
+  }
+}

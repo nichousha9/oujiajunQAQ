@@ -1,0 +1,43 @@
+@import "../../common/less/color.less";
+.qAItem{
+  height:40px;
+  line-height: 40px;
+  display: flex;
+  >div{
+    margin-left:15px;
+  }
+  >div:nth-child(1){
+    margin-left:0;
+    width:50px;
+  }
+  >div:nth-last-child{
+    width:30px;
+  }
+}
+.activeQAItem{
+  background:@lightBgColor;
+}
+.questionIcon{
+  background:@borderBoldColor;
+  display: inline-block;
+  margin-left:6px;
+  width:16px;
+  height:16px;
+  color: #fff;
+  border-radius: 10px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.activeQ{
+  background:@orgColor;
+}
+.activeA{
+  background:@rightColor;
+}
+.qa{
+
+}
+.action{
+
+}

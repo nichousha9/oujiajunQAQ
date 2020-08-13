@@ -1,0 +1,18 @@
+:global{
+  .commonSubMenue{
+    padding-right:1px; // 不明原因，菜单如果去除border-right,在下方会出现黑色的线不是border 通过给父级添加padding来解决
+    .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
+      border-right:0;
+    }
+    .ant-menu-sub.ant-menu-inline{
+      border-color:0;
+    }
+    .ant-menu-inline{
+      width:200px;
+    }
+    .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title{
+      padding:0 !important;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 20 0 20 20 0 20"></polygon>
+    </defs>
+    <g id="管理-首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-112.000000, -604.000000)">
+        <g id="index_icon2" transform="translate(112.000000, 604.000000)">
+            <rect id="Rectangle-7" fill-opacity="0.15" fill="#66C684" x="0" y="0" width="48" height="48" rx="24"></rect>
+            <g id="生活时长" transform="translate(14.000000, 14.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M10.0000716,0 C4.4783672,0 0,4.4783608 0,10.0000572 C0,15.5216392 4.4783672,20 10.0000716,20 C15.5216614,20 20,15.5216392 20,10.0000572 C20,4.4783608 15.5216614,0 10.0000716,0 Z M13.9189281,13.1134006 C13.5885791,13.4066442 13.0421956,13.4066442 12.7117535,13.1134006 L9.35729442,10.3835191 C9.23016789,10.2707712 9.16666667,10.1128581 9.16666667,9.93233474 L9.16666667,9.85337817 L9.37001328,4.08916282 C9.37001328,3.67176979 9.75111368,3.33333333 10.2212771,3.33333333 C10.6914715,3.33333333 11.072696,3.67176979 11.072696,4.08916282 L11.2505739,9.45856777 L13.9189281,12.0417173 C14.2492462,12.3462522 14.2492462,12.8201569 13.9189281,13.1134006 Z" id="Fill-1" fill="#66C684" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
