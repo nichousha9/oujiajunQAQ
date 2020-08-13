@@ -1,0 +1,33 @@
+@import '~antd/es/style/themes/default.less';
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.statusPoint {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  &,
+  & + span {
+    vertical-align: middle;
+  }
+}
+
+.addActivity {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .addbutton {
+    font-size: 48px;
+    width: 100px;
+    height: 100px;
+  }
+  .addText {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+}

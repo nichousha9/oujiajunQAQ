@@ -1,0 +1,221 @@
+.wrapper {
+  p {
+    margin: 0;
+  }
+  :global {
+    .ant-card-body {
+      padding: 0 16px 16px;
+    }
+    .ant-form-item {
+      height: 24px;
+    }
+    .ant-form-item-label,
+    .ant-form-item-control {
+      line-height: 24px;
+    }
+  }
+  .title {
+    margin: 24px 0 16px;
+    font-size: 16px;
+    color: #1A2A47;
+  }
+}
+.templateAreaCard {
+  border-left: none;
+  height: 100%;
+  background-color: #F6F7F8;
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+}
+.area {
+  padding: 8px 0;
+  min-height: 200px;
+  border-bottom: 1px solid #E9E9E9;
+  .card {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    cursor: move;
+    float: left;
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    &.disabled {
+      cursor: not-allowed;
+    }
+    .inputBlank {
+      display: inline-block;
+      // width: 200px;
+      width: 46%;
+      height: 24px;
+      padding: 0 8px;
+      margin-right: 16px;
+      background-color: #fff;
+      left: 667px;
+      border-radius: 4px;
+      border: 1px solid rgba(217, 217, 217, 1);
+      color: rgba(0, 0, 0, 0.25);
+      line-height: 24px;
+    }
+    .label {
+      display: block;
+      width: 26%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: right;
+      &::before {
+        display: inline;
+        content: '*';
+        color: #F4222D;
+      }
+    }
+  }
+  .blank {
+    border: 1px dashed #e8e8e8;
+  }
+  .tableCardCon {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    min-height: 99px;
+    margin: 8px 40px;
+    cursor: move;
+  }
+  .tableCard {
+    position: relative;
+    flex: 1;
+    // width: 20%;
+    background-color: #fff;
+    &.disabled {
+      cursor: not-allowed;
+    }
+    .label {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      padding: 1em;
+    }
+    .value {
+      padding: 1em;
+    }
+    .delBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      .delBtn {
+        visibility: visible;
+      }
+    }
+  }
+}
+.elementTitle {
+  color: rgba(26, 42, 71, 1);
+  font-size: 12px;
+  font-family: 'PingFangSC-Medium';
+}
+.elementsCon {
+  width: 221px;
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+.element {
+  width: 33.3%;
+  // margin-right: 15px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  color: rgba(26, 42, 71, 0.45);
+  font-size: 12px;
+  font-family: 'PingFangSC-Regular';
+  float: left;
+  text-align: center;
+  cursor: move;
+  &.disabled {
+    cursor: not-allowed;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  .icon {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: rgba(24, 144, 255, 1);
+    overflow: hidden;
+    text-align: center;
+    line-height: 44px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .text {
+    width: 100%;
+    letter-spacing: -1px;
+  }
+}
+.templateCon {
+  display: flex;
+  .left {
+    width: 256px;
+    .elementTitle {
+      margin-top: 8px;
+      line-height: 24px;
+      color: rgba(26, 42, 71, 1);
+      font-size: 12px;
+      font-family: PingFangSC-Medium;
+    }
+    .customPannel {
+      border: 0;
+    }
+    :global {
+      .ant-card-body {
+        max-height: 430px;
+        overflow: auto;
+        padding: 0 0 16px 16px;
+      }
+    }
+  }
+  .right {
+    flex: 1 1;
+  }
+  :global {
+    .ant-card {
+      height: 100%;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+      padding-left: 1em;
+    }
+    .ant-collapse-content > .ant-collapse-content-box {
+      padding: 0;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+      left: 0;
+    }
+  }
+}
+.tableAreaControl {
+  // display: flex;
+  padding: 8px 16px;
+  // justify-content: space-between;
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  .delBtn {
+    float: right;
+  }
+}
+
+.controlCollapse {
+  margin-top: 0.5em;
+}

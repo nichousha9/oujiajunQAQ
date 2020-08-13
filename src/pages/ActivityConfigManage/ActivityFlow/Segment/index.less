@@ -1,0 +1,46 @@
+@mainColor: #1890ff;
+@subColor: #fff;
+
+.saveSubsetBtn {
+  color: @mainColor;
+  background-color: @subColor;
+  border-radius: 10%;
+  border: solid 1px @mainColor;
+}
+
+.saveSubsetBtn:hover {
+  color: @subColor;
+  background-color: @mainColor;
+}
+
+.clickRow {
+  background-color: #eef9ff;
+}
+
+
+.segmentTableBlock {
+  :global {
+    .ant-btn.disabled, .ant-btn[disabled] {
+      color: @mainColor;
+      background-color: @subColor;
+      border-radius: 10%;
+      border: solid 1px @mainColor;
+    }
+  }
+}
+
+.savedSign {
+  td:first-of-type {
+    display: flex;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  td:first-of-type::before {
+    content: '';
+    display: inline-block;
+    border-top: 15px solid @mainColor;
+    border-right: 14px solid transparent;
+    margin-right: 6px;
+    height: 59px;
+  }
+}

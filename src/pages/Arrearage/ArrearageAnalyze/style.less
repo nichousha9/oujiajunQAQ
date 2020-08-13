@@ -1,0 +1,109 @@
+@import '~antd/es/style/themes/default.less';
+
+.gridCon {
+  width: 96%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  & > :global(.ant-col:not(:first-child) .ant-card-head) {
+    border-top: 1px solid #e8e8e8;
+  }
+  & > :global(.ant-col) {
+    &:nth-child(-n + 2) {
+      padding: 0 !important;
+    }
+    &:nth-child(2n + 3) {
+      padding-left: 0 !important;
+    }
+    &:nth-child(2n + 4) {
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.iconGroup {
+  i {
+    margin-left: 16px;
+    color: @text-color-secondary;
+    cursor: pointer;
+    transition: color 0.32s;
+    &:hover {
+      color: @text-color;
+    }
+  }
+}
+
+.chartTitle {
+  height: 65px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.ranking {
+  .rankTitle {
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .rankingNumber {
+    flex: 2;
+    display: inline-block;
+    text-align: center;
+    &.active {
+      font-size: 20px;
+    }
+  }
+  .rankingTitle {
+    flex: 10;
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .rankingValue {
+    flex: 4;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.rankingList {
+  padding: 0 12px;
+  list-style: none;
+  background-color: #fff;
+  li {
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9;
+    zoom: 1;
+    &::before,
+    &::after {
+      display: table;
+      content: ' ';
+    }
+    &::after {
+      clear: both;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    span {
+      color: @text-color;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+.radit {
+  text-align: center;
+  & > span + span {
+    margin-left: 12px;
+  }
+}

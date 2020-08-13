@@ -1,0 +1,519 @@
+// 推荐规则管理页面样式
+.recommendRuleList {
+  :global {
+    .ant-card-head {
+      height: 40px;
+      min-height: 40px;
+      padding: 0 12px;
+    }
+    .ant-card-head-title,
+    .ant-card-extra {
+      padding: 0;
+      line-height: 40px;
+      font-size: 14px;
+    }
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-list-items {
+      padding: 0 16px;
+    }
+    .ant-list-item-meta-avatar {
+      margin-right: 27px;
+    }
+  }
+  .listRowStyle {
+    width: 100%;
+    :global {
+      .ant-list-item-meta-title {
+        color: rgba(26, 42, 71, 0.45);
+        // word-break: break-all;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ant-list-item-meta-description,
+      .ant-badge-status-text {
+        color: rgba(26, 42, 71, 0.85);
+        // word-break: break-all;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ant-list-item-meta-content {
+        width: 100%;
+      }
+    }
+    .listColStyle {
+      display: flex;
+      align-items: center;
+      .leftImg {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 4px;
+        background: #faad14;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+        line-height: 48px;
+        font-size: 30px;
+      }
+      .rulesName {
+        color: #1890ff;
+      }
+      .leftWrapper {
+        :global {
+          .ant-list-item-meta-title {
+            width: calc(100% - 85px);
+          }
+          .ant-list-item-meta-description,
+          .ant-badge-status-text {
+            color: rgba(26, 42, 71, 0.85);
+            width: calc(100% - 85px);
+          }
+        }
+      }
+      .deepColor {
+        color: #3b4961;
+        font-weight: 540;
+      }
+      .rulesName {
+        color: #1890FF;
+      }
+      .lightColor {
+        color: #a6acb7;
+      }
+    }
+  }
+  // 分页器样式
+  .ruleInfoPagination {
+    margin: 10px;
+  }
+}
+
+// Card 头部右侧样式
+.topRightDiv {
+  :global {
+    .ant-input-search,
+    .ant-input-affix-wrapper {
+      width: 224px;
+    }
+
+    .ant-btn,
+    .ant-input-search {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+  }
+}
+
+// 新建推荐规则样式
+.newRecoRule {
+  :global {
+    .ant-card-head {
+      height: 40px;
+      min-height: 40px;
+    }
+    .ant-table-column-title {
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .ant-table-thead > tr > th {
+      padding: 0 16px;
+      height: 45px;
+    }
+    .ant-card-head-title,
+    .ant-card-extra {
+      padding: 0;
+      line-height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .ant-card-body {
+      padding: 20px 40px;
+    }
+    .ant-table-wrapper {
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .ant-table-thead > tr > th,
+    .ant-table-footer {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    .ant-table-footer {
+      padding: 0 16px;
+      line-height: 40px;
+      height: 40px;
+    }
+  }
+  .recoHeadBtn {
+    width: 48px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 0;
+    margin-left: 8px;
+    span {
+      font-size: 12px;
+      text-align: center;
+      line-height: 24px;
+    }
+    .recoHeadCancel {
+      font-size: 12px;
+    }
+  }
+  .ruleNameAndType {
+    :global {
+      .ant-form-item-label {
+        min-width: 84px;
+      }
+    }
+  }
+  .ruleDesc {
+    :global {
+      .ant-form-item-label {
+        min-width: 84px;
+      }
+      .ant-col-sm-4 {
+        width: 8.333%;
+      }
+    }
+  }
+  .ruleSource {
+    :global {
+      .ant-form-item-label {
+        min-width: 112px;
+      }
+      .ant-col-sm-2 {
+        width: 9%;
+      }
+    }
+    .radioWrapper {
+      label {
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+// 新增推荐规则->自定义
+.newRecoRuleForCustom {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 0 16px 16px 16px;
+  .recoCustomHead {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    :global {
+      .ant-btn {
+        padding: 0;
+      }
+    }
+    .span {
+      display: inline-block;
+      width: 75px;
+      height: 20px;
+      text-align: center;
+    }
+    input {
+      width: 200px;
+      height: 24px;
+    }
+    button {
+      width: 48px;
+      height: 24px;
+      span {
+        font-size: 14px;
+      }
+    }
+    .search {
+      margin: 0 8px;
+    }
+  }
+  .IsViewRule {
+    .leftWrapper{
+      display: none;
+    }
+    :global{
+      .ant-table-footer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .listFooter {
+    display: flex;
+    align-items: center;
+    .goodListPagination {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// 新增商品弹窗
+.newGoodModal {
+  :global {
+    .ant-modal-content {
+      width: 472px;
+    }
+    .ant-form-item-children #goodName {
+      display: flex;
+    }
+    .ant-col-sm-5 {
+      height: 20px;
+      line-height: 20px;
+    }
+    .ant-form-item-control {
+      line-height: 0;
+    }
+  }
+  .goodName {
+    display: flex;
+    align-items: center;
+    :global {
+      .ant-form-item-children {
+        display: flex;
+      }
+      .ant-input-number {
+        width: 100%;
+      }
+      .ant-input {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+// 选择商品
+.goodChooseModal {
+  width: 928px !important;
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-modal-body {
+      padding: 0;
+    }
+    .ant-table-tbody > tr > td {
+      height: 38px;
+      min-height: 38px;
+      padding: 0 16px;
+    }
+    .ant-table-thead > tr {
+      border-top: 1px solid #e8e8e8;
+    }
+    .ant-table-thead > tr > th {
+      background-color: #fff;
+      padding: 0 16px;
+      height: 45px;
+      min-height: 45px;
+    }
+    .ant-modal-content {
+      width: 928px;
+      // height: 508px;
+    }
+    .ant-card-head-title {
+      height: 40px;
+    }
+    .ant-input-search {
+      padding: 8px;
+      padding-bottom: 3px;
+      margin-bottom: 0px !important;
+    }
+    .ant-input-suffix {
+      top: 60%;
+    }
+  }
+  .chooseWrapper {
+    display: flex;
+    .treeList {
+      width: 200px;
+    }
+    .goodList {
+      flex: 1;
+      // 分页器样式
+      .goodListPagination {
+        margin: 10px;
+      }
+    }
+  }
+  // 表格列超出省略号
+  table {
+    table-layout: fixed;
+    td {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+// 批量导入
+.batchImport {
+  :global {
+    .ant-modal-content {
+      width: 508px;
+    }
+    .ant-modal-header {
+      padding: 0 24px;
+      height: 48px;
+      .ant-modal-title {
+        line-height: 48px;
+      }
+    }
+    .ant-modal-close-x {
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+  .countMessage {
+    margin-top: 10px;
+  }
+  .successCount {
+    margin-right: 10px;
+    // font-weight: bold;
+    color: #52C41A;
+  }
+  .failCount{
+    // font-weight: bold;
+    color: #F5222D;
+  }
+  .failResult {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+// 新增推荐规则->标签关联
+.newRecoRuleForLabel {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 16px;
+  :global {
+    .ant-table-footer {
+      padding: 0 16px;
+      line-height: 40px;
+      height: 40px;
+    }
+  }
+}
+
+// 新增推荐规则->算法获取
+.newRecoRuleForCalc {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  :global {
+    .ant-col-sm-2 {
+      min-width: 75px;
+    }
+    .ant-col-xs-18 {
+      width: 400px;
+    }
+  }
+}
+
+// 个人喜欢-会员选择弹窗
+.memberModal {
+  width: 650px !important;
+  :global {
+    .ant-modal-body {
+      padding: 0 16px;
+    }
+    .clickRowStyle {
+      background-color: #e6f7ff;
+    }
+    .ant-table-tbody > .clickRowStyle :hover > td {
+      background-color: #e6f7ff;
+    }
+    .ant-modal-body {
+      padding: 0 24px;
+    }
+    .ant-list-header {
+      height: 40px;
+      padding: 0;
+    }
+    .ant-input-search {
+      width: 184px;
+      float: right;
+      box-sizing: border-box;
+      padding: 8px 0;
+      .ant-input {
+        height: 24px;
+      }
+    }
+    .ant-modal-close-x {
+      line-height: 48.6px;
+    }
+    .ant-table-thead > tr > th {
+      background: #fff;
+    }
+    .ant-spin-container {
+      .ant-pagination {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .ant-table-thead > tr > th {
+      padding: 12px 16px;
+    }
+    .ant-table-tbody > tr > td {
+      padding: 8px 16px;
+    }
+  }
+  .recoListHead {
+    // display: flex;
+    padding-right: 5px;
+    .recoListHeadTitle {
+      width: 80px;
+      line-height: 40px;
+    }
+    .recoListHeadSearch {
+      flex: 1;
+    }
+  }
+  table {
+    table-layout: fixed;
+    td {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.goodsAdvancedSearch {
+  .rowBorderBottom {
+    border-bottom: 1px dashed #e9e9e9;
+  }
+
+  :global {
+    .ant-form-item {
+      width: 90%;
+    }
+    .ant-form-item-label {
+      width: 80px;
+    }
+    .ant-form-item-control-wrapper {
+      width: calc(100% - 80px);
+    }
+    .ant-btn {
+      margin-left: 8px;
+    }
+  }
+
+  .btnCol {
+    text-align: right;
+    padding-right: 16px;
+    line-height: 40px;
+  }
+}
+// -------------------------------------------------------------

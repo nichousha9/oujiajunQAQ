@@ -1,0 +1,26 @@
+.arrearageFormStyle {
+  margin: 0 -24px 24px -24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 24px;
+  :global {
+    .item {
+      margin: 10px 0;
+    }
+    .ant-select {
+      min-width: 100px;
+      width: unset;
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  .arrearageFormStyle {
+    flex-direction: column;
+    & > :global(.item) {
+      width: 80%;
+    }
+  }
+}

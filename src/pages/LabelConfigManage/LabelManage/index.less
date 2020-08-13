@@ -1,0 +1,87 @@
+@import '~antd/lib/style/themes/default.less';
+
+// 标签管理页面排版
+.labelManageCard {
+  // display: flex;
+  height: auto;
+  width: 100%;
+}
+
+// 左侧树状结构卡片
+.labelTreeCard {
+  // min-width: 240px;
+  // max-width: 240px;
+  min-height: 700px;
+}
+
+// 右侧列表卡片
+.labelListCard {
+  // margin: 0 16px;
+  // width: 100%;
+  min-height: 700px;
+}
+
+// 标签列表卡片右上方的按钮
+.titleExtra {
+  display: flex;
+  align-items: center;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+  .titleButton {
+    margin: 0 4px;
+  }
+}
+
+// 弹出对话框的底部按钮
+.modalFooter {
+  display: flex;
+  justify-content: center;
+}
+
+// 标签信息的表单
+.modalForm {
+  .titleBackground {
+    background-color: #f6f7f8;
+    padding: 6px 7px;
+    margin-bottom: 15px;
+    .title {
+      padding-left: 25px;
+      border-left: 3.5px solid @primary-color;
+    }
+  }
+
+  .createLabelValuebackground {
+    background-color: #f6f7f8;
+    width: 100%;
+    .tableBackground {
+      background-color: #fff;
+      padding: 14px;
+      margin: 0 0 16px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      :global {
+        .ant-table-thead {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-modal-body {
+      padding: 14px 16px !important;
+    }
+  }
+}
+
+// 标签值规格的标题
+.labelValueTitle {
+  margin: 8px 16px;
+}
+
+// 新增标签值规格的按钮
+.labelValueButton {
+  margin: 6px 16px;
+}

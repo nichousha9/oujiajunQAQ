@@ -1,0 +1,129 @@
+@import '~antd/lib/style/themes/default.less';
+
+// 表格列超出省略号
+.table-ellipsis() {
+  table {
+    table-layout: fixed;
+  }
+  :global {
+    .tableCol {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.monitorList {
+  .table-ellipsis();
+  :global {
+    .ant-table {
+      border: none;
+      margin: 16px 16px 0;
+    }
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-pagination {
+      margin-right: 12px;
+    }
+  }
+}
+
+.monitoreHeaderSearch {
+  text-align: right;
+
+  // 操作按钮的箭头图标
+  .arrowIcon {
+    transition: all 0.3s;
+    font-size: 10px;
+  }
+  .arrowUp {
+    transform: rotateZ(180deg);
+  }
+
+  :global {
+    .ant-input-search {
+      width: 224px;
+      max-width: 80%;
+      margin-right: 10px;
+    }
+  }
+}
+
+// 高级筛选
+.AdvancedSearchForm {
+  .rowBorderBottom {
+    border-bottom: 1px dashed #e9e9e9;
+  }
+
+  .title {
+    line-height: 40px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+    white-space:nowrap;
+  }
+
+  .btnCol {
+    text-align: right;
+    padding-right: 16px;
+    line-height: 40px;
+  }
+
+  :global {
+    .ant-form-item {
+      width: 80%;
+    }
+    .ant-form-item-label {
+      width: 80px;
+    }
+    .ant-form-item-control-wrapper {
+      width: calc(100% - 80px);
+    }
+    .ant-input:not(:last-child) {
+      padding-right: 45px;
+    }
+    .ant-calendar-picker {
+      min-width: 0 !important;
+      width: 100%;
+    }
+    .ant-btn {
+      margin-left: 8px;
+    }
+  }
+}
+
+// 推荐结果
+.statisticsModal {
+  .table-ellipsis()
+}
+
+// 高级筛选弹出框 Modal 样式
+.operationsModal {
+  .table-ellipsis();
+
+  .choosedTitle {
+    height: 28px;
+    line-height: 28px;
+    background: rgba(26, 42, 71, 0.04);
+    margin-bottom: 16px;
+    margin-top: 32px;
+    span {
+      margin-left: 8px;
+      border-left: 3px solid @primary-color;
+      padding-left: 15px;
+    }
+  }
+  .tableFooter {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchInput {
+    float: right;
+    z-index: 1;
+    width: 30%;
+    margin-bottom: 16px;
+  }
+}

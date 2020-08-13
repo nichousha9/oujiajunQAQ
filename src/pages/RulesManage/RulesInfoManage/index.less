@@ -1,0 +1,243 @@
+/* stylelint-disable */
+
+// 规则组列表页面
+.ruleInfoList {
+  float: right;
+  width: 100%;
+  :global {
+    .ant-card-head {
+      height: 40px;
+      min-height: 40px;
+      padding: 0 12px;
+    }
+    .ant-card-head-title,
+    .ant-card-extra {
+      padding: 0;
+      line-height: 40px;
+      font-size: 14px;
+    }
+    .ant-card-body {
+      padding: 0;
+    }
+    // .ant-list-items:last-child {
+    //   border-bottom: 1px solid #e8e8e8;
+    // }
+    .ant-list-items {
+      padding: 0 16px;
+    }
+    .ant-list-item-meta-avatar {
+      margin-right: 27px;
+    }
+  }
+
+  // 规则组列表样式
+  .listRowStyle {
+    width: 100%;
+    :global {
+      .ant-list-item-meta-title {
+        color: rgba(26, 42, 71, 0.45);
+        // word-break: break-all;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ant-list-item-meta-description,
+      .ant-badge-status-text {
+        color: rgba(26, 42, 71, 0.85);
+        // word-break: break-all;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ant-list-item-meta-content {
+        width: 100%;
+      }
+    }
+    .listColStyle {
+      display: flex;
+      align-items: center;
+      .leftWrapper {
+        :global {
+          .ant-list-item-meta-title {
+            width: calc(100% - 85px);
+          }
+          .ant-list-item-meta-description,
+          .ant-badge-status-text {
+            color: rgba(26, 42, 71, 0.85);
+            width: calc(100% - 85px);
+          }
+        }
+      }
+      .leftImg {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 4px;
+        background: #faad14;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+        line-height: 48px;
+        font-size: 30px;
+      }
+      .deepColor {
+        color: #3b4961;
+        font-weight: 540;
+      }
+      .rulesName {
+        color: #1890FF;
+      }
+      .lightColor {
+        color: #a6acb7;
+      }
+      .operateStyle {
+        color: #faad14;
+        line-height: 40px;
+      }
+      .cursorPointer {
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+  // 分页器样式
+  .ruleInfoPagination {
+    margin: 10px;
+  }
+}
+
+// Card 头部右侧样式
+.topRightDiv {
+  :global {
+    .ant-input-search,
+    .ant-input-affix-wrapper {
+      width: 224px;
+    }
+
+    .ant-btn,
+    .ant-input-search {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+  }
+}
+
+// 新建规则组样式
+.ruleModalForm {
+  width: 472px !important;
+  height: 282px;
+  :global {
+    .ant-modal-header {
+      height: 48px;
+      padding: 0 24px;
+      .ant-modal-title {
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+        color: rgba(26, 42, 71, 1);
+        line-height: 48px;
+      }
+    }
+  }
+  .ruleModalTextArea {
+    margin-bottom: 0;
+  }
+}
+
+// 子规则列表样式
+.childRuleList {
+  :global {
+    .ant-table-thead > tr > th {
+      background: #fff;
+    }
+    .ant-table-content {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .ant-table-footer {
+      background: #fff;
+      padding: 0px 16px;
+    }
+    .ant-table-thead > tr > th {
+      padding: 12px 16px;
+    }
+    .ant-table-tbody > tr > td {
+      padding: 8px 16px;
+    }
+  }
+  .childFooter{
+    display: flex;
+    align-items: center;
+  }
+  .ruleInfoPagination{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// 推荐规则管理列表弹窗
+.recoRuleModal {
+  width: 650px!important;
+  :global {
+    .ant-modal-header {
+      padding: 13px 24px;
+    }
+    .ant-modal-body {
+      padding: 0 16px 9px 16px;
+    }
+    .ant-list-header {
+      height: 40px;
+      padding: 0;
+    }
+    .ant-input-search {
+      width: 184px;
+      float: right;
+      box-sizing: border-box;
+      padding: 8px 0;
+      .ant-input {
+        height: 24px;
+      }
+    }
+    .ant-modal-close-x {
+      line-height: 48.6px;
+    }
+    .ant-table-thead > tr > th {
+      background: #fff;
+    }
+    .ant-pagination {
+      padding-top: 9px;
+      margin: 0;
+    }
+    .ant-spin-container {
+      .ant-pagination {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .ant-table-thead > tr > th {
+      padding: 12px 16px;
+    }
+    .ant-table-tbody > tr > td {
+      padding: 8px 16px;
+    }
+  }
+  .recoListHead {
+    padding-right: 5px;
+    .recoListHeadTitle {
+      width: 80px;
+      line-height: 40px;
+    }
+    .recoListHeadSearch {
+      flex: 1;
+    }
+  }
+  table {
+    table-layout: fixed;
+    td {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

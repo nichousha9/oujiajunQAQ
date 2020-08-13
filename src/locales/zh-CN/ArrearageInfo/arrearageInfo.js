@@ -1,0 +1,18 @@
+export default {
+  'arrearageInfo.chooseDate': '选择时间',
+  'arrearageInfo.chooseArea': '选择地点',
+  'arrearageInfo.customerCode': '客户编码',
+  'arrearageInfo.customerName': '客户姓名',
+  'arrearageInfo.ownedSubsidiary': '所属分公司',
+  'arrearageInfo.area': '区县',
+  'arrearageInfo.ownedNet': '所属网格',
+  'arrearageInfo.arrearsAccountPeriod': '欠费账期',
+  'arrearageInfo.totalArrearsAmount(yuan)': '总欠费金额（元）',
+  'arrearageInfo.goodName': '产品名称',
+  'arrearageInfo.goodCode': '产品号码',
+  'arrearageInfo.productArrearsAmount(yuan)': '产品欠费金额（元）',
+  'arrearageInfo.whetherAllUsersAreInArrears': '是否所有用户欠费',
+  'arrearageInfo.ownedAccountManager': '所属客户经理',
+  'arrearageInfo.exportData': '导出数据',
+  'arrearageInfo.searchTreePlaceholder': '请输入省/市/分公司/网格/责任田名称',
+}

@@ -1,0 +1,13 @@
+FROM 10.45.80.1/public/centos7_java8_tomcat8_base:8.0.35
+MAINTAINER kylin
+ENV LANG C.UTF-8
+#COPY portal/portal-web/target/portal-web.war /usr/tomcat/tomcat8.0/webserver/webapps/portal.war
+#COPY portal/dockerfiles/setenv-web.sh /usr/tomcat/tomcat8.0/webserver/bin/setenv.sh
+#RUN mkdir -p /usr/tomcat/tomcat8.0/conf
+RUN mkdir -p /usr/tomcat/tomcat8.0/webserver/webapps/dist
+RUN yum -y install libXext.i686
+RUN yum -y install unzip
+#RUN unzip -o /usr/tomcat/tomcat8.0/webserver/webapps/portal.war -d /usr/tomcat/tomcat8.0/webserver/webapps/portal/
+#COPY portal/dockerfiles/kylin-config /usr/tomcat/tomcat8.0/kylin-config
+COPY /react/docker-app.def /root/
+COPY /react/dist /usr/tomcat/tomcat8.0/webserver/webapps/ire/

@@ -1,0 +1,79 @@
+@import '~antd/lib/style/themes/default.less';
+
+.btnGroup {
+  display: flex;
+  padding-top: 8px;
+  justify-content: flex-end;
+  .btn {
+    margin-right: 0.5em;
+  }
+}
+
+.extraBlock {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    
+    .ant-col {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .effectBtn {
+    background-color: #fff;
+    margin-right: 8px;
+  }
+}
+
+.tagWrapper {
+  :global {
+    .ant-upload.ant-upload-select{
+      display: block;
+      width: auto;
+    }
+  }
+  .algorithmTag {
+    width: auto;
+    display: block;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 0;
+    margin: 0.5em 0;
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.tagWrapper:hover {
+  cursor: pointer;
+  :global {
+    .ant-tag {
+      border: 1px solid #1890FF;
+    }
+  }
+}
+
+.paramsWrapper {
+  :global {
+    .ant-form-item-label > label {
+      color: #1890FF;
+    }
+  }
+}
+
+.featureSearch {
+  margin-bottom: 0.5em;
+}
+
+.featureControl {
+  display: inline-block;
+    width: 70%;
+    margin-left: .5em;
+}
+
+.featureFooterBtn {
+  margin-right: 0.5em;
+}

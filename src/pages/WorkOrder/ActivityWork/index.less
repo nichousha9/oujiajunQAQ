@@ -1,0 +1,132 @@
+.sumCon {
+  font-size: 14px;
+  color: rgba(26, 42, 71, 0.45);
+  & > span {
+    margin-left: 24px;
+  }
+  .num {
+    color: rgba(26, 42, 71, 0.85);
+  }
+  :global {
+    .anticon {
+      margin-right: 8px;
+    }
+  }
+}
+.listItem {
+  &:hover {
+    background-color: #e6f7ff;
+  }
+}
+.workList {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: -1px;
+  :global {
+    .ant-table-thead > tr > th {
+      background-color: #fff;
+    }
+    .ant-table-pagination.ant-pagination {
+      margin: 8px 0;
+    }
+  }
+}
+
+// 标签列表卡片右上方的按钮
+.titleExtra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.textLayout {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.grayText {
+  line-height: 22px;
+  color: rgba(26, 42, 71, 0.45);
+  font-size: 14px;
+  //font-family: PingFangSC-Regular;
+  margin-right: 10px;
+}
+.numberText {
+  line-height: 22px;
+  color: rgba(26, 42, 71, 0.85);
+  font-size: 14px;
+  //font-family: PingFangSC-Regular;
+}
+
+.indicatorCollapse {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  :global {
+    .ant-collapse-arrow {
+      display: none !important;
+    }
+    .ant-collapse-content {
+      border: 0;
+    }
+    .ant-collapse-header {
+      padding-left: 16px !important;
+      background-color: #fff;
+    }
+    .ant-collapse-content-box {
+      background-color: rgba(251, 251, 252, 1);
+    }
+  }
+}
+
+.description .descriptionItem {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.allSelectRow {
+  .check {
+    display: inline-block;
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+
+  .title {
+    display: inline-block;
+    margin-right: 2rem;
+    .selectedTitle {
+      margin-left: 1em;
+    }
+    .selectNum {
+      margin-left: 0.5em;
+      color: #1890ff;
+    }
+  }
+  .pagination {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+  }
+}
+
+.panelCheck {
+  margin-right: 17px;
+}
+
+.avatarIcon {
+  font-size: 48px;
+}
+
+.colorGray {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.actionLink {
+  padding-left: 48px;
+}

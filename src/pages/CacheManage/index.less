@@ -1,0 +1,41 @@
+@import '~antd/lib/style/themes/default.less';
+
+// index
+.advancedFilterBlock {
+  display: flex;
+
+  .codeInput {
+    margin: 0;
+    line-height: 0;
+    :global {
+      .ant-form-item-control {
+        line-height: 0;
+      }
+    }
+  }
+}
+
+.btnGroup {
+  display: flex;
+  padding: 1em 0px;
+  justify-content: flex-end;
+  .btn {
+    margin-right: 0.5em;
+  }
+  .flushBtn {
+    background-color: darkorange;
+    color: #fff;
+  }
+}
+
+.linkBtn {
+  padding: 0;
+}
+
+.cacheManagePage {
+  :global {
+    .ant-table-row-expand-icon {
+      display: none;
+    }
+ }
+}

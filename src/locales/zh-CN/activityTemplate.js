@@ -1,0 +1,17 @@
+export default {
+  'activityTemplate.modelName': '模板名称',
+  'activityTemplate.camType': '模板类型',
+  'activityTemplate.modelStatus': '模板状态',
+  'activityTemplate.searchTempleteName': '搜索模板名称',
+  'activityTemplate.listTitle': '活动模板管理',
+  'activityTemplate.elementTitle': '要素控制',
+  'activityTemplate.elementArea': '控件区',
+  'activityTemplate.templateConfiguration': '模板配置',
+  'activityTemplate.addTable': '添加表格',
+  'activityTemplate.customerBaseInfo': '客户基础信息',
+  'activityTemplate.addTemplete': '新增模板',
+  'activityTemplate.baseInfo': '基本信息',
+  'activityTemplate.templateName': '模板名称',
+  'activityTemplate.templateType': '模板类别',
+  'activityTemplate.creator': '创建人',
+}

@@ -1,0 +1,19 @@
+.featureGroupBlock {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.02);
+  & + .featureGroupBlock {
+    margin-top: 16px;
+  }
+}
+.innerCard {
+  background-color: transparent;
+  :global {
+    .ant-card-body {
+      padding: 16px 0 0;
+    }
+  }
+}
+.delBtnBox {
+  text-align: right;
+  margin-bottom: 24px;
+}

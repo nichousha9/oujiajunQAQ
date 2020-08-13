@@ -1,0 +1,200 @@
+// 流程图样式
+.title {
+  color: #1a2a47;
+  font-weight: bold;
+  margin: 12px 0 16px;
+}
+.chart {
+  display: flex;
+  width: 100%;
+  height: 470px;
+  :global {
+    .ant-card,
+    .ant-card-body {
+      height: 100%;
+    }
+    .dropHover,
+    .dragActive {
+      float: left;
+      background-color: transparent;
+      border-radius: 50%;
+    }
+
+    .dropHover::before,
+    .dragActive::before {
+      float: left;
+      width: 12px;
+      height: 12px;
+      margin-left: -2px;
+      margin-top: -2px;
+      box-sizing: content-box;
+      border-radius: 50%;
+      background-color: rgba(33, 100, 119, 0.6);
+      content: ' ';
+    }
+
+    .dropHover::before {
+      width: 14px;
+      height: 14px;
+      margin-left: -3px;
+      margin-top: -3px;
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    width: 84px;
+    height: 40px;
+    color: rgba(26, 42, 71, 0.65);
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 25px;
+    cursor: move;
+    .iconItem {
+      width: 32px;
+      height: 32px;
+      margin-left: 6px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 100%;
+      font-size: 19px;
+      color: #fff;
+      background-color: #1890FF;
+    }
+    .name {
+      flex: 1 1;
+      text-align: center;
+    }
+  }
+  
+  .editorElementSidebar {
+    width: 230px;
+    height: 100%;
+    .item {
+      margin-bottom: 16px;
+    }
+  }
+
+  .editorContent {
+    flex: 1;
+    height: 100%;
+    :global {
+      .ant-card-body {
+        padding: 0;
+      }
+    }
+    .flowBox {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      .rcmidTree {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        // padding: 8px;
+        overflow: hidden;
+        cursor: default;
+
+        .deleteBox {
+          position: absolute;
+          z-index: 99;
+          width: 120px;
+          height: auto;
+          padding: 8px 0;
+          background-color: #fff;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+          div {
+            width: 100%;
+            padding: 0 8px;
+            color: #535353;
+            font-size: 16px;
+            line-height: 24px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #e3e8ee;
+            }
+
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .projectBtn {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .item {
+          position: absolute;
+          box-shadow: 2px 2px 4px 0 rgba(231, 235, 243, 1);
+          &.active {
+            background-color: rgba(24, 144, 255, 0.12);
+            border-color: #1890FF;
+          }
+        }
+      }
+    }
+  }
+
+  .editorSidebar {
+    width: 320px;
+  }
+}
+
+// 底部按钮
+.footer {
+  margin-top: 16px;
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid #E9E9E9;
+}
+
+// 流程配置属性
+.detailForm {
+  position: relative;
+  .detailFormFoot {
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+    text-align: center;
+  }
+}
+
+.userChooseWrapper {
+  :global {
+    .ant-pagination {
+      width: 100%;
+      text-align: right;
+    }
+    .ant-pagination-total-text {
+      float: left;
+    }
+  }
+  .title {
+    height: 28px;
+    color: #1a2a4c;
+    line-height: 28px;
+    background-color: rgba(26, 42, 71, 0.04);
+    margin-bottom: 16px;
+    &::before {
+      position: relative;
+      top: 3px;
+      display: inline-block;
+      width: 3.5px;
+      height: 16px;
+      margin: 2px 14px 0 6px;
+      background-color: @primary-color;
+      content: '';
+    }
+    .titleMore {
+      float: right;
+    }
+  }
+}

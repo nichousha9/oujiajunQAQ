@@ -1,0 +1,58 @@
+.detailCrad {
+  min-height: calc(100vh - 108px);
+
+  .cardTitleLink {
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+.cardList {
+  :global {
+    .ant-list-split .ant-list-item:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
+
+// 表格上方搜索框
+.inputSearch() {
+  display: flex;
+  width: 224px;
+  margin: 0 0 8px auto;
+}
+
+.inputAttr {
+  .inputSearch {
+    .inputSearch();
+  }
+
+  :global {
+    .ant-table-row-expand-icon {
+      display: none;
+    }
+  }
+}
+
+.inputAttrDetail {
+  .formButtonContainer {
+    text-align: center;
+  }
+}
+
+.detailLog {
+  .inputSearch {
+    .inputSearch();
+  }
+}
+
+.centerObject {
+  .inputSearch {
+    .inputSearch();
+
+    display: block;
+    text-align: right;
+  }
+  .formButtonContainer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,86 @@
+@import '~antd/es/style/themes/default.less';
+// 目录树样式
+.treeStyle {
+  width: 100%;
+  // background: red;
+}
+
+.treeTitle {
+  position: relative;
+  padding-right: 25px;
+}
+
+.moreStyle {
+  height: 20px !important;
+}
+
+.commonTreeStyle {
+  .more {
+    // display: none;
+    // float: right;
+    // position: relative;
+    // right: 20px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    display: none;
+  }
+  :global {
+    .ant-tree {
+      overflow: auto;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      // width: 100% !important;
+      min-width: calc(100% - 24px);
+    }
+
+    li .ant-tree-node-content-wrapper:hover {
+      :local .more {
+        display: inline-block;
+      }
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      :local .more {
+        display: inline-block;
+      }
+    }
+
+    .ant-popover-inner {
+      box-shadow: none !important;
+    }
+
+    .ant-popover {
+      margin-top: 12px !important;
+    }
+
+    .ant-popover-inner-content {
+      padding: 0 !important;
+      background: fade(@primary-color, 20%);
+    }
+
+    .ant-popover-placement-right > .ant-popover-content > .ant-popover-arrow,
+    .ant-popover-placement-rightTop > .ant-popover-content > .ant-popover-arrow,
+    .ant-popover-placement-rightBottom > .ant-popover-content > .ant-popover-arrow {
+      border-bottom-color: fade(@primary-color, 20%) !important;
+      border-left-color: fade(@primary-color, 20%) !important;
+      box-shadow: none !important;
+    }
+
+    .ant-tree.ant-tree-directory {
+      li.ant-tree-treenode-selected > span.ant-tree-switcher,
+      .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-switcher {
+        color: @primary-color !important;
+      }
+      li span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+      .ant-tree-child-tree > li span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+        color: @primary-color !important;
+      }
+      li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper::before,
+      li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper::before {
+        background: fade(@primary-color, 20%) !important;
+        border-left: 2px solid @primary-color;
+      }
+    }
+  }
+}

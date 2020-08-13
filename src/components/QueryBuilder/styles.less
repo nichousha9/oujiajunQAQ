@@ -1,0 +1,152 @@
+// 条件组、条件的 margin-left
+@block-margin: 30px;
+// 条件组 margin-top/margin-bottom
+@rulegroup-margin: 22px;
+// 条件 margin-top/margin-bottom
+@rule-margin: 20px;
+// 条件 padding-top/padding-bottom
+@rule-padding: 6px;
+// 连接线距离左侧的宽
+@line-with: 18px;
+// 连接线颜色
+@border-color: #40a9ff;
+
+.queryBuilder {
+  :global {
+    .rule-fields {
+      width: 224px;
+      margin: 0;
+
+      .ant-input[disabled] {
+        color: rgba(0, 0, 0, 0.65);
+        background-color: transparent;
+      }
+    }
+
+    .rule-operators {
+      width: 224px;
+      margin: 4px 24px 4px 16px;
+      line-height: 40px;
+    }
+
+    .rule-value {
+      width: 224px;
+    }
+
+    .rule-remove {
+      margin: 0 16px;
+    }
+
+    .rootTtile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      font-weight: bold;
+    }
+
+    .ruleGroup-operation {
+      overflow: hidden;
+      text-align: right;
+    }
+
+    .ruleGroup-combinators {
+      float: left;
+    }
+
+    .ruleGroup-addRule,
+    .ruleGroup-addGroup,
+    .ruleGroup-remove {
+      margin-left: 12px;
+    }
+
+    .ruleGroup {
+      margin-left: @block-margin;
+      margin-top: @rulegroup-margin;
+      margin-bottom: @rulegroup-margin;
+      position: relative;
+      border: 1px solid transparent;
+
+      &:first-child {
+        margin: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -@rulegroup-margin;
+        left: -@line-with;
+        width: @line-with;
+        height: calc(~'50% + @{rulegroup-margin}');
+        border-color: @border-color;
+        border-style: solid;
+        border-width: 0 0 2px 2px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -@line-with;
+        width: @line-with;
+        height: calc(~'50% + @{rulegroup-margin}');
+        border-color: @border-color;
+        border-style: solid;
+        border-width: 0 0 0 2px;
+      }
+    }
+
+    .rule {
+      width: 856px;
+      text-align: center;
+      margin-left: @block-margin;
+      margin-top: @rule-margin;
+      margin-bottom: @rule-margin;
+      padding: @rule-padding;
+      border: 1px dashed #d9d9d9;
+      border-radius: 4px;
+      position: relative;
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -@rule-margin;
+        left: -@line-with;
+        width: @line-with;
+        height: calc(~'50% + @{rule-margin} ');
+        border-color: @border-color;
+        border-style: solid;
+        border-width: 0 0 2px 2px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -@line-with;
+        top: 50%;
+        width: @line-with;
+        height: calc(~'50% + @{rule-margin}');
+        border-color: @border-color;
+        border-style: solid;
+        border-width: 0 0 0 2px;
+      }
+    }
+  }
+}

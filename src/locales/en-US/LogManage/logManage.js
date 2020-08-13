@@ -1,0 +1,16 @@
+export default {
+  'logManage.staffNamePlaceHolder': '请输入员工名称查询',
+  'logManage.staffName': '员工名称',
+  'logManage.ip': '登陆IP',
+  'logManage.login.Log': '登陆日志',
+  'logManage.login.time': '登陆时间',
+  'logManage.login.result': '登陆结果',
+  'logManage.login.failure': '登陆失败',
+  'logManage.login.success': '登陆成功',
+  'logManage.login.description': '说明',
+  'logManage.menu.Log': '历史访问菜单日志',
+  'logManage.menu.account': '用户账号',
+  'logManage.menu.job': '岗位名称',
+  'logManage.menu.menu': '菜单名称',
+  'logManage.menu.time': '访问时间',
+}

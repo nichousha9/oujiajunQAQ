@@ -1,0 +1,84 @@
+@import '~antd/lib/style/themes/default.less';
+
+.customerArrearagePage {
+  :global {
+    .ant-card-body {
+      padding: 16px;
+    }
+  }
+}
+
+.arrearageBlock {
+  margin-bottom: 16px;
+}
+
+.infoBox {
+  display: inline-block;
+  width: 184px;
+  height: 60px;
+  padding: 8px;
+  margin: 0 16px 8px 0;
+  border: 1px solid #dddfe4;
+  box-shadow: 2px 2px 4px 0 #e7ebf3;
+  border-radius: 8px;
+  background: #fff;
+  color: #666;
+
+  .iconItem {
+    float: left;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+
+    .icon {
+      color: #fff;
+      font-size: 24px;
+      line-height: 45px;
+      text-align: center;
+    }
+  }
+
+  .content {
+    float: left;
+    padding-left: 8px;
+  }
+
+  .name {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 24px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(26, 42, 71, 0.45);
+  }
+
+  .desc {
+    color: #1A2A47;
+    font-size: 14px;
+  }
+}
+
+.tableTitle {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.featureInfo {
+  :global {
+    .ant-descriptions-item-label {
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    .ant-descriptions-item-content {
+      color: #000;
+    }
+  }
+}

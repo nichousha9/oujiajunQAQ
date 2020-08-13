@@ -1,0 +1,460 @@
+/* stylelint-disable */
+.stepContainer {
+  padding: 15px 90px;
+  background-color: white;
+}
+
+.main {
+  min-height: calc(100vh - 190px);
+  margin: 16px 0 0 0;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.headerBox {
+  padding: 0 16px;
+  color: #1a2a47;
+  font-size: 16px;
+  line-height: 40px;
+  border-bottom: 1px solid rgba(234, 236, 238, 1);
+}
+
+.middle {
+  position: relative;
+  top: 8px;
+}
+
+.cententBox {
+  padding: 16px;
+
+  .textEclicips {
+    :global {
+      .ant-form-item-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .title {
+    font-size: 16px;
+    color: #1a2a47;
+    margin-bottom: 20px;
+
+    :global {
+      .and {
+        font-size: 4px;
+      }
+    }
+  }
+}
+
+.flowChart {
+  .flowHeader {
+    height: 45px;
+    line-height: 45px;
+
+    .closeBtn {
+      margin-left: 5px;
+      margin-right: 0;
+      color: #989fac;
+      position: relative;
+
+      &:hover {
+        color: #ff3408;
+      }
+    }
+
+    .addBtn {
+      font-size: 16px;
+      line-height: 45px;
+      color: #36c626;
+      cursor: pointer;
+    }
+
+    :global {
+      .ant-tabs-bar {
+        margin: 0;
+      }
+
+      .ant-tabs-nav-scroll {
+        padding-left: 16px;
+      }
+
+      .ant-tabs-nav .ant-tabs-tab {
+        margin: 0;
+      }
+    }
+  }
+
+  :global {
+    .ant-tabs-tab {
+      height: 100% !important;
+      line-height: 1.5 !important;
+      border-radius: 0 !important;
+    }
+
+    .ant-tabs-tab-active {
+      border: none !important;
+    }
+
+    .ant-tabs-card-bar .ant-tabs-nav-container {
+      height: 40px !important;
+    }
+  }
+}
+
+.poverIcon {
+  font-size: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.chart {
+  height: calc(100vh - 233px);
+  width: 100%;
+  display: flex;
+
+  :global {
+    .dropHover,
+    .dragActive {
+      float: left;
+      background-color: transparent;
+      border-radius: 50%;
+    }
+
+    .dropHover:before,
+    .dragActive:before {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin-left: -5px;
+      margin-top: -5px;
+      box-sizing: content-box;
+      border-radius: 50%;
+      background-color: rgba(33, 100, 119, 0.6);
+      content: ' ';
+    }
+
+    .dropHover:after,
+    .dragActive:after {
+      float: left;
+      clear: both;
+      width: 10px;
+      height: 10px;
+      margin-top: -15px;
+      box-sizing: border-box;
+      border: 1px solid #39ca74;
+      border-radius: 50%;
+      background-color: #fff;
+      content: ' ';
+    }
+
+    .dropHover:before {
+      width: 28px;
+      height: 28px;
+      margin-left: -9px;
+      margin-top: -9px;
+    }
+  }
+
+  .leftContent {
+    height: 100%;
+    overflow: auto;
+    width: 265px;
+    background-color: white;
+    padding: 16px;
+    border-right: 1px solid #e8e8e8;
+
+    .title {
+      cursor: pointer;
+
+      .icon {
+        transform: rotate(0deg);
+        transition: all 1s;
+        -moz-transition: all 1s; /* Firefox 4 */
+        -webkit-transition: all 1s; /* Safari and Chrome */
+        -o-transition: all 1s; /* Opera */
+
+        &.hideItem {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .typeBox {
+      margin-bottom: 5px;
+      padding-top: 5px;
+      overflow: hidden;
+      min-height: 75px;
+      transition: all 1s;
+      -moz-transition: all 1s; /* Firefox 4 */
+      -webkit-transition: all 1s; /* Safari and Chrome */
+      -o-transition: all 1s; /* Opera */
+
+      &.hideItem {
+        height: 0;
+        min-height: 0;
+      }
+
+      .item {
+        margin-bottom: 5px;
+
+        .iconItem {
+          cursor: pointer;
+          width: 45px;
+          height: 45px;
+          border-radius: 8px;
+          background-color: #faad14;
+          text-align: center;
+
+          .icon {
+            color: white;
+            font-size: 26px;
+            line-height: 45px;
+            text-align: center;
+          }
+        }
+
+        .name {
+          width: 45px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 24px;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+          color: rgba(26, 42, 71, 0.45);
+        }
+      }
+    }
+  }
+
+  .rightContent {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .flowBox {
+      background-color: #f6f7f8;
+      flex: 1;
+      position: relative;
+
+      .rcmidTree {
+        width: 100%;
+        height: 100%;
+        padding: 8px;
+        overflow: hidden;
+        position: relative;
+        cursor: default;
+
+        .deleteBox {
+          position: absolute;
+          width: 120px;
+          height: auto;
+          padding: 8px 0;
+          background-color: #fff;
+          z-index: 99;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+          div {
+            line-height: 24px;
+            width: 100%;
+            padding: 0 8px;
+            cursor: pointer;
+            color: #535353;
+            font-size: 16px;
+
+            &:hover {
+              background-color: #e3e8ee;
+            }
+
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .projectBtn {
+          position: relative;
+          .tooltips {
+            width: 100px;
+          }
+          .item {
+            position: absolute;
+            margin-bottom: 40px;
+
+            .tacheA {
+              display: inline-block;
+              width: 187px;
+              height: 60px;
+              color: #666;
+              padding: 8px;
+              background: #fff;
+              border: 1px solid #dddfe4;
+              box-shadow: 2px 2px 4px 0 #e7ebf3;
+              border-radius: 8px;
+
+              &.tacheInitial {
+                background: #d6dadc;
+              }
+
+              .iconItem {
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                border-radius: 8px;
+                background-color: #faad14;
+                text-align: center;
+                float: left;
+
+                .icon {
+                  color: white;
+                  font-size: 26px;
+                  line-height: 45px;
+                  text-align: center;
+                }
+              }
+
+              .content {
+                float: left;
+                line-height: 24px;
+                font-size: 12px;
+                color: #535353;
+                padding-left: 8px;
+
+                span {
+                  display: block;
+                  width: 90px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  font-size: 12px;
+                  color: rgba(26, 42, 71, 0.45);
+
+                  &:last-child {
+                    font-size: 14px;
+                    color: rgba(26, 42, 71, 0.85);
+                  }
+                }
+              }
+
+              .iconBox {
+                float: right;
+                position: absolute;
+                right: 8px;
+                .iconStatus {
+                  font-size: 20px;
+                  line-height: 22px;
+                  color: rgb(102, 102, 102);
+
+                  &.success {
+                    color: #36c626;
+                  }
+
+                  &.stop {
+                    color: red;
+                  }
+
+                  &.fail {
+                    color: #faad14;
+                  }
+                }
+
+                .num {
+                  margin-top: 5px;
+                  text-align: right;
+                  font-size: 12px;
+                  color: rgba(26, 42, 71, 0.45);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      background-color: white;
+      height: 40px;
+      line-height: 40px;
+      padding-right: 25px;
+      text-align: right;
+    }
+  }
+}
+
+.floatToolBtnsBox {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin: 0;
+
+  &.node {
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    box-shadow: none;
+  }
+
+  .toolsItem {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+    float: left;
+
+    &:hover {
+      background-color: rgba(26, 42, 71, 0.04);
+    }
+  }
+}
+
+.tachePopover {
+  :global {
+    .ant-popover-inner-content {
+      padding: 4px !important;
+    }
+  }
+}
+
+.resuleChartBox {
+  .finish {
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    margin: 10px 0;
+  }
+
+  .icon {
+    margin-top: 50px;
+    font-size: 70px;
+    color: #36c626;
+  }
+
+  text-align: center;
+}
+
+.tabExtra {
+  padding-right: 24px;
+}
+
+.formRow {
+  & >:global(.ant-col) {
+    height: 64px;
+  }
+}

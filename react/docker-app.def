@@ -1,0 +1,10 @@
+#!/bin/bash
+APP=( "tomcat" )
+tomcat=(
+     "/usr/tomcat/tomcat8.0/webserver/bin/catalina.sh run"    # start command
+     "tomcat"       # process key
+     "echo OK"    # liveness check command
+     "OK"         # liveness successful code
+     "echo OK"    # readiness check command
+     "OK"         # readiness successful code
+    )

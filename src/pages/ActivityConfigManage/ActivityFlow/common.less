@@ -1,0 +1,223 @@
+@import '~antd/es/style/themes/default.less';
+// 流程弹窗编辑样式
+.flowModal {
+  :global {
+    .ant-modal-body {
+      padding: 16px;
+    }
+    .ant-modal-footer {
+      text-align: center;
+    }
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 8px;
+    }
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+    .ant-form-item-label,
+    .ant-form-item-control {
+      line-height: 24px;
+    }
+    .has-error .ant-form-explain,
+    .has-error .ant-form-split {
+      font-size: 12px;
+      line-height: 1;
+      min-height: 0;
+      margin-top: 8px;
+    }
+    .ant-form-item-with-help {
+      margin-bottom: 16px;
+    }
+    .ant-calendar-picker,
+    .ant-time-picker,
+    .ant-input-number {
+      width: 100%;
+    }
+  }
+
+  // 弹窗标题
+  .titleNameFormItem {
+    display: inline-block;
+    margin-bottom: 0;
+    :global {
+      .ant-form-item-control {
+        line-height: 24px;
+      }
+    }
+  }
+
+  .modalTitle {
+    margin-right: 46px;
+  }
+
+  .titleNameInput {
+    input {
+      border: none;
+    }
+    :global {
+      .ant-input-group-addon {
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+
+  // 编辑表单样式
+  .editableRow {
+    .tableFormItem {
+      margin-bottom: 0;
+    }
+    .ratioText {
+      position: absolute;
+    }
+    .textEllipsis {
+      width: 150px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+    }
+    :global {
+      td {
+        padding: 8px 8px;
+      }
+      .ant-form-item-control-wrapper {
+        width: 100%;
+      }
+      .ant-form-item,
+      .ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+      .ant-form-item-control {
+        line-height: 1.5;
+      }
+      .ant-form-explain {
+        font-size: 12px;
+        min-height: 0;
+      }
+      .ant-form-item-control.has-error {
+        :local {
+          .choose {
+            color: #f5222d;
+          }
+        }
+      }
+    }
+  }
+}
+
+.title {
+  height: 28px;
+  color: #1a2a4c;
+  line-height: 28px;
+  background-color: rgba(26, 42, 71, 0.04);
+  margin-bottom: 16px;
+  &::before {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 3.5px;
+    height: 16px;
+    margin: 2px 14px 0 6px;
+    background-color: @primary-color;
+    content: '';
+  }
+  .titleMore {
+    float: right;
+  }
+}
+
+.block + .block {
+  margin-top: 16px;
+}
+
+.doubleFormItem {
+  margin-bottom: 0 !important;
+}
+.connectSwitch {
+  display: inline-block;
+  width: 50px;
+}
+.connectSwitchOther {
+  display: inline-block;
+  width: calc(~'100% - 80px');
+}
+.inlineFormItem {
+  display: inline-block;
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// 选择弹窗选中表格某条记录样式
+.tableRowSelect {
+  background-color: fade(@primary-color, 10%);
+}
+
+// 选择弹窗外框和搜索框
+.chooseWrapper {
+  .treeBox {
+    height: 100%;
+  }
+}
+.chooseWrapperCard {
+  :global {
+    .ant-card-head {
+      border-bottom: none;
+    }
+    .ant-card-body {
+      padding-top: 0;
+    }
+  }
+}
+.chooseSearch {
+  width: 225px;
+}
+
+// 输出
+.outputCusRow {
+  margin-bottom: 8px;
+}
+.outputCus {
+  flex-wrap: nowrap;
+  width: 300px;
+  height: 54px;
+  padding: 0 8px;
+  font-size: 12px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 4px;
+  .text {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: hidden;
+  }
+  p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .tip {
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    background-color: @primary-color;
+    border-radius: 8px;
+  }
+}
+
+.interval {
+  float: left;
+  margin-right: 8px;
+  width: 80%;
+  margin-left: 4%;
+}

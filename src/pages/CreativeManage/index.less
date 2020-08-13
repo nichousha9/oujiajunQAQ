@@ -1,0 +1,62 @@
+@import '~antd/lib/style/themes/default.less';
+
+.wrapper {
+  //padding: 16px;
+  height: 100%;
+  .treeMain {
+    height: 100%;
+    background: #fff;
+    .add,
+    .update {
+      height: 100%;
+      background: #fff;
+    }
+  }
+  .table {
+    height: 100%;
+    background: #fff;
+  }
+}
+
+.imgCreative {
+  .upload {
+    width: 160px;
+    height: 160px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px dashed #e6e6e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      border: 1px dashed #1890ff;
+    }
+  }
+  .uploadText {
+    margin-top: 10px;
+  }
+}
+
+.txtCreative {
+  .txtForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    > div {
+      overflow: auto;
+    }
+  }
+}
+
+.htmlCreative {
+  .htmlForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    > div {
+      overflow: auto;
+    }
+  }
+}

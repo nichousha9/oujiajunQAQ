@@ -1,0 +1,96 @@
+.detailCrad {
+  min-height: calc(100vh - 108px);
+
+  .cardTitleLink {
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+.cardList {
+  :global {
+    .ant-list-split .ant-list-item:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
+
+// 表格上方搜索框
+.inputSearch() {
+  display: flex;
+  width: 224px;
+  margin: 0 0 8px auto;
+}
+
+.inputSrc {
+  .inputSearch {
+    .inputSearch();
+
+    display: block;
+    text-align: right;
+  }
+  :global {
+    .ant-table-row-expand-icon {
+      display: none;
+    }
+  }
+}
+
+.inputAttrDetail {
+  .formButtonContainer {
+    text-align: center;
+  }
+}
+
+.detailLog {
+  .inputSearch {
+    .inputSearch();
+  }
+}
+
+.centerObject {
+  .inputSearch {
+    .inputSearch();
+  }
+  .formButtonContainer {
+    text-align: center;
+  }
+}
+
+.outputAttr {
+  .inputSearch {
+    .inputSearch();
+  }
+}
+
+.activePolicy {
+  .policies {
+    :global {
+      .ant-card-head {
+        background: linear-gradient(to right, #fef4a5, #fff);
+      }
+    }
+  }
+  .inputSrc {
+    :global {
+      .ant-card-head {
+        background: linear-gradient(to right, #daeaf1, #fff);
+      }
+    }
+  }
+  .calcPolicy {
+    :global {
+      .ant-card-head {
+        background: linear-gradient(to right, #e6e1f5, #fff);
+      }
+    }
+  }
+  .formItemNoMargin {
+    margin: 0 !important;
+  }
+
+  :global {
+    .ant-select {
+      width: 100%;
+    }
+  }
+}
