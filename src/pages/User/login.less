@@ -1,0 +1,57 @@
+@import '~antd/lib/style/themes/default.less';
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .login_box {
+    position: absolute;
+    width: 370px;
+    height: 400px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); // translateX(-50%)
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 21, 41, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .login_logo {
+      width: 141px;
+      height: 30px;
+      margin-top: 40px;
+    }
+    .login_box_title {
+      margin: 30px 0 40px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #32466f;
+      letter-spacing: 0;
+      // line-height: 30px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      img {
+        margin-right: 10px;
+        position: relative;
+        top: -5px;
+      }
+    }
+    .login_title {
+      width: 320px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.65);
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+    .login_box_cont {
+      .ipt_box_cont {
+        width: 320px;
+      }
+      .signin {
+        margin-top: 5px;
+      }
+    }
+  }
+}

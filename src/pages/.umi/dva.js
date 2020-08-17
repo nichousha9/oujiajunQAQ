@@ -12,7 +12,7 @@ export function _onCreate() {
     history,
     
     ...(runtimeDva.config || {}),
-    ...(window.g_useSSR ? { initialState: window.g_initialData } : {}),
+    ...(window.g_useSSR ? { initialState: window.g_initialData[location.pathname] } : {}),
   });
   
   app.use(createLoading());
@@ -20,10 +20,11 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'campaignModal', ...(require('E:/仓库/项目仓库/fire-kylin/src/models/campaignModal.js').default) });
-app.model({ namespace: 'common', ...(require('E:/仓库/项目仓库/fire-kylin/src/models/common.js').default) });
-app.model({ namespace: 'global', ...(require('E:/仓库/项目仓库/fire-kylin/src/models/global.js').default) });
-app.model({ namespace: 'user', ...(require('E:/仓库/项目仓库/fire-kylin/src/models/user.js').default) });
+  app.model({ namespace: 'common', ...(require('E:/仓库/项目仓库/dtmm-fe/src/models/common.js').default) });
+app.model({ namespace: 'global', ...(require('E:/仓库/项目仓库/dtmm-fe/src/models/global.js').default) });
+app.model({ namespace: 'login', ...(require('E:/仓库/项目仓库/dtmm-fe/src/models/login.js').default) });
+app.model({ namespace: 'menuJump', ...(require('E:/仓库/项目仓库/dtmm-fe/src/models/menuJump.js').default) });
+app.model({ namespace: 'user', ...(require('E:/仓库/项目仓库/dtmm-fe/src/models/user.js').default) });
   return app;
 }
 

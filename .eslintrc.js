@@ -1,0 +1,36 @@
+module.exports = {
+  parser: 'babel-eslint',
+  extends: ['airbnb', 'prettier', 'plugin:compat/recommended'],
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    mocha: true,
+    jest: true,
+    jasmine: true,
+  },
+  globals: {
+    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: true,
+    page: true,
+  },
+  rules: {
+    eqeqeq: 0,
+    'import/prefer-default-export': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'compat/compat': 0,
+    'import/newline-after-import': 0,
+    'import/no-unresolved': 0,
+    'react/prop-types': 0,
+    'import/no-cycle': 0,
+    'react/no-array-index-key': 0,
+    'react/jsx-wrap-multilines': 0,
+    'react/jsx-indent': 0,
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-tag-spacing': 0,
+  },
+  settings: {
+    polyfills: ['fetch', 'promises', 'url'],
+  },
+};

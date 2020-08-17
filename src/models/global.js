@@ -1,111 +1,32 @@
-import { sendMsg,getAtOutlineInfo } from '../services/api';
+import defaultSettings from '../../config/defaultSettings';
 
-const doRefesh = (data) => {
-  // 如果当前的是登录页面 或者是 错误页 不用获取用户信息
-  if(data.pathname==='/user/login' || data.pathname.indexOf('exception') > -1) return;
-  // 每次获取每次存在的数据
-
-}
-export default {
+const GlobalModel = {
   namespace: 'global',
-
   state: {
-    status:undefined,
-    owner:{}, // 租户信息
-    newMessageAgent:[], // 坐席端的消息
-    atMeMsgIdArr:{},// at的信息，
-    collapsed: true,// 菜单默认收起
-    enterType:'enter',
+    collapsed: false,
+    theme: defaultSettings.navTheme,
+    layout: defaultSettings.layout,
   },
-
-  effects: {
-    *fetchNotices(_, { call, put }) {
-        return;
-    },
-    *clearNotices({ payload }, { put, select }) {
-        return;
-    },
-    *sendMsg({ payload }, { call, put }) {
-         const response = yield call(sendMsg, payload);
-         yield put({
-           type: 'sendMsgRE',
-           payload: response,
-         });
-    },
-    *fetchGetAtOutlineInfo({ payload }, { call, put }) {
-      const response = yield call(getAtOutlineInfo, payload);
-      if(response.status==='OK'){
-        const messageArr = response.data || [];
-        const atMeOutline = {};
-        messageArr.forEach((msg) =>{
-          const key = msg.groupid ? 'groupid' : 'usession';
-          if(atMeOutline[msg[key]]) {
-            atMeOutline[msg[key]].push(msg.id);
-          }else{
-            atMeOutline[msg[key]] = [msg.id]
-          }
-        })
-        console.log('atMeOutline:',atMeOutline)
-        yield put({
-          type: 'saveAtMeInf',
-          payload:atMeOutline,
-        });
-      }
-      return response;
-    },
-  },
-
+  effects: {},
   reducers: {
-      changeEnterType(state,{payload}){
-        return {
-          ...state,
-          enterType: payload.enterType,
-        }
+    changeLayoutCollapsed(
+      state = {
+        collapsed: true,
       },
-      saveAtMeInf(state,{ payload }){
-        return {
-          ...state,
-          atMeMsgIdArr: payload,
-        }
-      },
-      saveOwnerInfo(state,{payload}) {
-          // 缓存租户
-          let owner = {}
-          if(payload){
-              owner = { orgid: payload.orgi,tenantname: payload.tenantname};
-          }
-        return { ...state,owner };
-      },
-      changeLayoutCollapsed(state, { payload }) {
-          return {
-            ...state,
-            collapsed: payload,
-          };
-        },
-      sendMsgRE(state, { payload }) {
-        return {
-          ...state,
-          status: payload.status,
-        };
-      },
-      changeSideBarBadge(state, {payload}) {
-        return {
-          ...state,
-          hasNewMsg: payload,
-        };
-      },
-      saveNewMessageAgent(state,{payload}){
-        return{
-          ...state,
-          newMessageAgent:payload || [],
-        };
-      },
+      { payload },
+    ) {
+      return { ...state, collapsed: payload };
+    },
   },
   subscriptions: {
-    setup({dispatch,history}) {
-      history.listen((res) => {
-        doRefesh(res,dispatch);
+    setup({ history }) {
+      // Subscribe history(url) change, trigger `load` action if pathname is `/`
+      history.listen(({ pathname, search }) => {
+        if (typeof window.ga !== 'undefined') {
+          window.ga('send', 'pageview', pathname + search);
+        }
       });
     },
   },
 };
+export default GlobalModel;

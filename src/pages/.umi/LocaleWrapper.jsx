@@ -28,25 +28,25 @@ const useLocalStorage = true;
 import { LocaleProvider, version } from 'antd';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-let defaultAntd = require('antd/es/locale-provider/zh_CN');
+let defaultAntd = require('antd/lib/locale-provider/zh_CN');
 defaultAntd = defaultAntd.default || defaultAntd;
 
 const localeInfo = {
   'en-US': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('E:/仓库/项目仓库/fire-kylin/src/locales/en-US.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('E:/仓库/项目仓库/dtmm-fe/src/locales/en-US.js')),
     },
     locale: 'en-US',
-    antd: require('antd/es/locale-provider/en_US'),
+    antd: require('antd/lib/locale-provider/en_US'),
     data: require('react-intl/locale-data/en'),
     momentLocale: '',
   },
   'zh-CN': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('E:/仓库/项目仓库/fire-kylin/src/locales/zh-CN.js')),
+      ...((locale) => locale.__esModule ? locale.default : locale)(require('E:/仓库/项目仓库/dtmm-fe/src/locales/zh-CN.js')),
     },
     locale: 'zh-CN',
-    antd: require('antd/es/locale-provider/zh_CN'),
+    antd: require('antd/lib/locale-provider/zh_CN'),
     data: require('react-intl/locale-data/zh'),
     momentLocale: 'zh-cn',
   },
@@ -133,7 +133,7 @@ class LocaleWrapper extends React.Component{
      const isConfigProvider = Number(major) > 3 || (Number(major) >= 3 && Number(minor) >= 21);
      if (isConfigProvider) {
        try {
-         AntdProvider = require('antd/es/config-provider').default;
+         AntdProvider = require('antd/lib/config-provider').default;
        } catch (e) {}
      }
 

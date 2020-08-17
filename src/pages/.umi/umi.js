@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import findRoute, {
   getUrlQuery,
-} from 'E:/仓库/项目仓库/fire-kylin/node_modules/umi-build-dev/lib/findRoute.js';
+} from 'E:/仓库/项目仓库/dtmm-fe/node_modules/umi-build-dev/lib/findRoute.js';
 
 // runtime plugins
 const plugins = require('umi/_runtimePlugin');
@@ -35,7 +35,7 @@ let clientRender = async () => {
   // Both support SSR and CSR
   if (window.g_useSSR) {
     // 如果开启服务端渲染则客户端组件初始化 props 使用服务端注入的数据
-    props = window.g_initialData;
+    props = window.g_initialData[location.pathname];
   } else {
     const pathname = location.pathname;
     const activeRoute = findRoute(require('@@/router').routes, pathname);
@@ -201,7 +201,9 @@ if (!__IS_BROWSER) {
       htmlElement: matchPath ? htmlTemplateMap[matchPath] : '',
       rootContainer,
       matchPath,
-      g_initialData: props,
+      g_initialData: {
+        [ctx.req.url]: props,
+      },
       context,
     };
   };
@@ -221,8 +223,8 @@ export default (__IS_BROWSER ? null : serverRender);
 
     // Umi UI Bubble
     require('../../../node_modules/umi-plugin-ui/lib/bubble').default({
-      port: 3000,
-      path: 'E:/仓库/项目仓库/fire-kylin',
+      port: 3001,
+      path: 'E:/仓库/项目仓库/dtmm-fe',
       currentProject: '',
       isBigfish: undefined,
     });
